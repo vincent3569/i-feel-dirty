@@ -1,0 +1,40 @@
+<?php include ('header.php'); ?>
+
+	<div class="main">
+		<div class="content">
+			<div id="breadcrumb">
+				<h2>
+					<?php printHomeLink('', ' &raquo; '); ?>
+					<a href="<?php echo html_encode(getGalleryIndexURL(/*false*/)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+				</h2>
+			</div>
+
+			<div class="post">
+				<div class="posttitle">
+					<h3><?php printPageTitle(); ?></h3>
+				</div>
+
+				<?php if (getPageExtraContent()) { ?>
+					<div class="extra-content">
+						<?php printPageExtraContent(); ?>
+					</div>
+				<?php } ?>
+
+				<div class="entrytext clearfix">
+					<?php
+					printPageContent();
+					printCodeblock(1);
+					?>
+				</div>
+
+				<?php include('print_comment.php'); ?>
+
+			</div>
+
+		</div>	<!-- content -->
+
+	<?php include('sidebar.php'); ?>
+
+	</div>	<!-- main -->
+
+<?php include('footer.php'); ?>
