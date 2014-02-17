@@ -6,7 +6,7 @@ Author: Studio ST
 Author URI: http://studio.st/
 Adapted on ZenPhoto by: Vincent3569
 URI: http://www.vincentbourganel.fr
-Version 1.4.4
+Version 1.4.5
 */
 
 /* --------- clear -----------*/
@@ -28,7 +28,7 @@ body {
 	margin: 20px auto 30px;
 }
 img {
-	border: 0;
+	border: 0 none;
 }
 
 /*------------------------------------------------------------------------------
@@ -76,10 +76,10 @@ img {
 	width: 100%;
 	margin: 5px 0 0 10px;
 }
-.rsslink  a.rssimg {
+.rsslink a.rssimg {
 	float: left;
 }
-.rsslink  a.rsstext {
+.rsslink a.rsstext {
 	float: left;
 	margin: 5px 0 0 3px;
 }
@@ -88,10 +88,10 @@ img {
 	margin: 10px 0 0 6px;
 }
 .flags li {
-    padding: 4px 3px 2px 4px;
+	padding: 4px 3px 2px 4px;
 }
 .currentLanguage {
-    border: 1px solid #9b0e0e;
+	border: 1px solid #9b0e0e;
 }
 .flags img {
 	vertical-align: top;
@@ -131,7 +131,7 @@ img {
 
 /* news and page */
 .post {
-	margin-bottom:20px;
+	margin-bottom: 20px;
 }
 .posttitle {
 	background: url(../images/blockquotebg2.gif) no-repeat;
@@ -243,6 +243,7 @@ img {
 	margin-bottom: 10px;
 }
 .image {
+	display: block;
 }
 .imagethumb {
 	float: left;
@@ -280,12 +281,28 @@ img {
 	margin: 15px 0;
 	text-align: center;
 }
- 
+
+/* captcha */
+img#captcha {
+	display: block;
+	float: left;
+	margin-bottom: 5px;
+}
+input#code {
+	float: left;
+	margin-left: 5px;
+	width: 60px!important;
+}
+#recaptcha_widget, #recaptcha_widget_div {
+	margin: 0 40px 5px 0;
+	float: right;
+}
+
 /* contact, register, tags, favorites, rating and archives */
 .contact {
 	background: #e2ebed url(../images/commentformbg.jpg) no-repeat;
-	width: 444px;
-	padding: 30px 0 10px 15px;
+	width: 434px;
+	padding: 30px 0 10px 30px;
 }
 .contact strong {
 	font-weight: bold;
@@ -295,34 +312,43 @@ form strong {
 	font-weight: bold;
 	color: #9b0e0e;
 }
-form#mailform {
+form#mailform p {
+	margin-bottom: 5px;
+	clear: both;
 }
-form#mailform table {
-	margin: 15px auto 0 auto;
+form#mailform label {
+	display: block;
+	float: left;
+	padding-top: 2px;
+	width: 150px;
 }
-form#mailform table td {
-	text-align: left;
-}
-form#mailform input[type=text]{
-	width: 200px;
+form#mailform input[type=text] {
+	width: 230px;
 }
 form#mailform textarea {
-	width: 310px;
-	height: 150px;
+	width: 400px;
+	height: 200px;
+	margin-bottom: 5px;
 }
-table.register_user {
-	padding: 10px 0 10px 10px;
+#registration_form p {
+	clear: both;
+	margin-bottom: 5px!important;
 }
-table.register_user td {
-	vertical-align: top;
-	padding: 0 0 3px;
+#registration_form label {
+	display: block;
+	float: left;
+	padding-top: 2px;
+	width: 150px;
 }
-.register_user  input[type=text], .register_user  input[type=password]{
-	width: 200px;
+#registration_form input[type="text"], #registration_form input[type="password"] {
+	width: 230px;
 }
-.contact table td {
-	padding-bottom: 5px;
-	min-width: 105px;
+#registration_form input#disclose_password {
+	margin-top: 3px;
+	padding: 0!important;
+}
+#registration_form input[type="submit"] {
+	margin-left: 150px;
 }
 .tags {
 	text-align: center;
@@ -333,8 +359,8 @@ table.register_user td {
 	display: inline;
 	list-style: square inside none;
 }
-.tags  ul li {
-	display:inline;
+.tags ul li {
+	display: inline;
 	margin: 0 10px 0 0;
 }
 .tags ul a {
@@ -352,6 +378,12 @@ table.register_user td {
 }
 .rating {
 	margin: 10px 0 10px 20px;
+}
+.rating-cancel, .star-rating {
+	margin-top: 5px;
+}
+.rating .button {
+	margin-left: 10px;
 }
 .googlemap {
 	text-align: center;
@@ -405,13 +437,13 @@ table.register_user td {
 
 /* butons */
 input, textarea, .disabled_input, select {
-	background: #fff !important;
+	background: #fff!important;
 	border: 1px solid #ccc!important;
-	padding: 3px 5px !important;
+	padding: 3px 5px!important;
 	margin: 0 5px 0 0;
 	font-family: "Lucida Grande", "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px;
-	font-weight: normal !important;
+	font-weight: normal!important;
 	border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px;
 }
 input:hover, input:focus {
@@ -420,19 +452,19 @@ input:hover, input:focus {
 }
 input.button, input[type=button], input[type=submit], input[type=reset] {
 	background: #ddd!important;
-	width: 120px;
-	border:1px solid #ccc!important;
+	width: 130px;
+	border: 1px solid #ccc!important;
 	cursor: pointer!important;
 	border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px;
 }
-input.button:hover, input.button:focus,input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus, input[type=reset]:hover, input[type=reset]:focus, #rating input[type=button]:hover, #rating input[type=button]:focus {
-	border:1px solid #999!important;
+input.button:hover, input.button:focus, input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus, input[type=reset]:hover, input[type=reset]:focus, #rating input[type=button]:hover, #rating input[type=button]:focus {
+	border: 1px solid #999!important;
 	border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px;
 }
-button {
+button[type=submit], button[type=reset], button[type=button] {
 	background: #ddd!important;
-	border:1px solid #ccc!important;
-	width: 100px;
+	border: 1px solid #ccc!important;
+	width: 130px;
 	padding: 3px 5px!important;
 	margin: 0 5px 0 0;
 	font-family: "Lucida Grande", "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
@@ -440,31 +472,28 @@ button {
 	font-weight: normal!important;
 	border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px;
 }
-button:hover {
+button[type=submit]:hover, button[type=reset]:hover, button[type=button]:hover {
+	cursor: pointer!important;
 	border: 1px solid #999!important;
 	border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px;
 }
-button[type=submit]:hover, button[type=reset]:hover {
-	cursor: pointer!important;
-	border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px;
-}
 #search_submit {
- width:  80px!important;
-}
-#commentform .pushbutton {
- margin: 10px 0;
- width: auto!important;
+	width: 80px!important;
 }
 
 /* error box */
 .errorbox {
-	margin: 10px 0 0 15px;	
+	margin: 0 20px 10px 0;
 	font-size: 11px;
 	font-weight: bold;
 	color: #9b0e0e;
 }
 .errorbox h2 {
 	font-size: 12px;
+}
+.errorlist {
+	margin-left: 10px;
+	padding-left: 15px;
 }
 
 /*------------------------------------------------------------------------------
@@ -527,7 +556,7 @@ ul.pagelist li.next {
 	font-size: 30px;
 }
 .img-nav a {
-	text-decoration:none;
+	text-decoration: none;
 }
 .img-previous {
 	float: left;
@@ -557,6 +586,13 @@ ul.pagelist li.next {
 }
 #icon-comment {
 }
+#comment-wrap {
+	background: #e2ebed url(../images/commentformbg.jpg) no-repeat;
+	width: 434px;
+	padding: 30px 0 10px 30px;
+	margin-bottom: 10px;
+}
+
 .comments, .comments-image {
 	margin: 30px 0 10px 20px;
 	clear: both;
@@ -628,31 +664,52 @@ ul.pagelist li.next {
 	color: #777;
 	line-height: 17px;
 }
-#commentform {
-	background: #e2ebed url(../images/commentformbg.jpg) no-repeat;
-	width: 444px;
-	padding: 30px 0 10px 20px;
-	margin-bottom: 10px;
+form#commentform {
 }
-#commentform .error {
+form#commentform .error {
 	font-weight: bold;
 	color: #9b0e0e;
 }
-#commentform table td {
-	color: #294a59;
-	padding: 2px 10px 2px;
+form#commentform {
+	text-align: left;
 }
-#commentform .inputbox, #commentform .disabled_input {
-	width: 200px;
+form#commentform p {
+	margin-bottom: 5px;
+	clear: both;
 }
-#commentform textarea {
-	width: 410px;
-	height: 150px;
+form#commentform strong {
+	font-weight: bold;
+	color: red;
+}
+form#commentform label {
+	display: block;
+	float: left;
+	padding-top: 2px;
+	width: 150px;
+}
+form#commentform label[for="anon"], form#commentform label[for="private"] {
+	display: inline;
+	width: auto;
+	margin-right: 10px;
+}
+form#commentform label[for=code] {
+}
+form#commentform .inputbox {
+	width: 230px;
+}
+form#commentform input#anon, form#commentform input#private {
+	margin-top: 2px;
+}
+form#commentform textarea {
+	width: 400px;
+	height: 160px;
+	margin-bottom: 10px;
 }
 #comment_tbl {
-	width: 425px!important;
+	width: 400px!important;
+	margin-bottom: 10px!important;
 }
-#comment_tbl  td {
+#comment_tbl td {
 	padding: 0!important;
 }
 
@@ -720,7 +777,7 @@ ul.pagelist li.next {
 .bloque1 a, .bloque2 a {
 	color: #000;
 }
-.bloque1 ul a:hover, .bloque1 a:hover  {
+.bloque1 ul a:hover, .bloque1 a:hover {
 	background-color: #6c644d;
 	color: #fff;
 	border: 0;
@@ -768,7 +825,7 @@ ul.pagelist li.next {
 	padding: 0;
 }
 
-/* password and register */
+/* password and login */
 #passwordform {
 	background: #E2EBED;
 	margin: 0 auto;
@@ -776,7 +833,7 @@ ul.pagelist li.next {
 	width: 400px;
 	text-align: left;
 }
-#passwordform p{
+#passwordform p {
 	text-align: center;
 	margin-bottom: 15px;
 }
@@ -784,25 +841,25 @@ ul.pagelist li.next {
 	width: 300px;
 	margin: 0 auto 10px;
 }
-#registration_form {
-	margin: 0 auto;
-	width: 400px;
-}
-#loginform fieldset, #registration_form fieldset {
+#loginform fieldset {
 	border: 1px solid #bbb;
 	padding: 10px;
 	line-height: 20px;
 	margin-bottom: 5px;
 	border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; -webkit-border-radius: 5px;
 }
-#loginform legend, #registration_form legend {
+#loginform legend {
 	color: #333;
 }
 #loginform input.textfield {
 	width: 250px;
 }
+#loginform input#disclose_password {
+	margin: 5px 5px 0 2px;
+	padding: 0!important;
+}
 div.buttons {
-	margin-left: 10px;
+	margin-left: 15px;
 }
 .logon_link {
 	margin: 20px 0 0!important;

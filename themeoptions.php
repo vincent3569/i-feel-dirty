@@ -69,7 +69,7 @@ class ThemeOptions {
 
 	function handleOption($option, $currentValue) {
 		if ($option == 'ifeeldirty_homepage') {
-			$unpublishedpages = query_full_array("SELECT titlelink FROM " . prefix('pages') . " WHERE `show` != 1 ORDER by `sort_order`");
+			$unpublishedpages = query_full_array("SELECT titlelink, title FROM " . prefix('pages') . " WHERE `show` != 1 ORDER by `sort_order`");
 			if (empty($unpublishedpages)) {
 				echo gettext("No unpublished pages available");
 				// clear option if no unpublished pages are available or have been published meanwhile
@@ -92,7 +92,7 @@ class ThemeOptions {
 					} else {
 						$selected = "";
 					}
-					echo "<option$selected>".$page["titlelink"]."</option>";
+					echo '<option value="' . $page["titlelink"] . '"' . $selected . '>' . get_language_string($page["title"]) . '</option>';
 				}
 
 				echo "</select>\n";

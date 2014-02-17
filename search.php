@@ -5,12 +5,7 @@
 			<div id="breadcrumb">
 				<h2>
 					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
-					<?php if ((gettext(getOption('ifeeldirty_homepage')) == gettext('none')) && (!getOption('ifeeldirty_news_on_homepage'))) { ?>
-						<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo html_encode(getGalleryTitle()); ?></a>
-					<?php } else { ?>
-						<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
-					<?php } ?>
+					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
 					&raquo;&nbsp;<?php echo '<em>'.gettext('Recherche').'</em>'; ?>
 				</h2>
 			</div>
@@ -88,14 +83,14 @@
 				if ($numnews > 0) { ?>
 					<div>
 						<ul class="search-item"><li><?php printf(gettext('Articles (%s)'), $numnews); ?></li></ul>
-						<?php while (next_news('date', 'desc')): ; ?>
+						<?php while (next_news('date', 'desc')) { ?>
 							<div class="search-news clearfix">
 								<h3 class="search-title"><?php printNewsTitleLink(); ?></h3>
 								<div class="search-content clearfix">
 									<?php echo shortenContent(strip_tags(getNewsContent()), 100, getOption('zenpage_textshorten_indicator')); ?>
 								</div>
 							</div>
-						<?php endwhile; ?>
+						<?php } ?>
 						
 					</div>
 				<?php
@@ -104,14 +99,14 @@
 				if ($numpages > 0) { ?>
 					<div>
 						<ul class="search-item"><li><?php printf(gettext('Pages (%s)'), $numpages); ?></li></ul>
-						<?php while (next_page()): ; ?>
+						<?php while (next_page()) { ?>
 							<div class="search-page clearfix">
 								<h3 class="search-title"><?php printPageTitlelink(); ?></h3>
 								<div class="search-content clearfix">
 									<?php echo shortenContent(strip_tags(getPageContent()), 100, getOption("zenpage_textshorten_indicator")); ?>
 								</div>
 							</div>
-						<?php endwhile; ?>
+						<?php } ?>
 					</div>
 				<?php
 				}

@@ -2,7 +2,7 @@
 
 				<?php printNewsPageListWithNav(gettext('next »'), gettext('« prev')); ?>
 
-				<?php while (next_news()): ; ?>
+				<?php while (next_news()) { ?>
 				<div class="post clearfix">
 					<div class="posttitle">
 						<h3><?php printNewsTitleLink(); ?></h3>
@@ -16,6 +16,6 @@
 						<?php printNewsContent(); ?>
 					</div>
 				</div>
-				<?php endwhile; ?>
+				<?php } ?>
 
 				<?php printNewsPageListWithNav(gettext('next »'), gettext('« prev')); ?>

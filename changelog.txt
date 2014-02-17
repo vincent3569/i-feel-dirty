@@ -1,3 +1,34 @@
+* 1.4.5
+- css/style.css :
+	- fix issue on button css rules (to avoid overwriting between i-feel-dirty css rules and colorbox css 1.4.5 rules)
+	- graphical improvements to be compliant with html5
+	- graphical improvements to be compliant with new contact, comment and register forms
+- js/i-feel-dirty.js :
+	- add jquery to use theme rss image for comment rss feed instead standard rss image
+- album.php, favorites.php, gallery.php, image.php, inc_header.php, inc_print_album_thumb.php, inc_print_image_thumb.php, inc_print_news_loop.php, search.php :
+	- code clean up
+- album.php, gallery.php, image.php, search.php :
+	- rewrite of breadcrumb
+- album.php, image.php, news.php, pages.php, inc_print_comment.php:
+	- some rewrite to be compliant with new comment_form plugin
+- contact.php, news.php, pages.php, register.php
+	- add controls on plugins before display these pages
+- inc_footer.php :
+	- remove printAdminToolbox(), deprecated with 1.4.5
+- inc_header.php :
+	- switch to html5 (https://github.com/zenphoto/zenphoto/issues/274)
+	- some rewrite to be compliant with new rss plugin
+	- use printRSSHeaderLink() instead of printZenpageRSSHeaderLink(), deprecated with 1.4.5
+	- add pagination in title tag on gallery, album, news, search and favorites pages
+	- fix some translation of Colorbox slideshow
+- inc_print_album_thumb.php, inc_print_image_thumb.php
+	- add a class to images to apply specific css rules
+- inc_sidebar.php :
+	- fix an issue on root album link
+- themeoptions.php :
+	- fix issue on 'Homepage' option : dispalays translated title of unpublished pages
+
+
 * 1.4.4
 - css/style.css :
 	- graphical improvements to be compliant with zenphoto 1.4.4

@@ -18,13 +18,11 @@
 
 				<h2>
 					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
-					<?php if ((gettext(getOption('ifeeldirty_homepage')) == gettext('none')) && (!getOption('ifeeldirty_news_on_homepage'))) { ?>
-						<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo html_encode(getGalleryTitle()); ?></a>
-					<?php } else { ?>
-						<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
+					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+					<?php if ((class_exists('Zenpage')) && ((gettext(getOption('ifeeldirty_homepage')) <> gettext('none')) || (getOption('ifeeldirty_news_on_homepage')))) { ?>
+						&raquo;&nbsp;<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
 					<?php } ?>
-					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); ?><?php printAlbumBreadcrumb('', ' » '); ?><?php printImageTitle(true); ?>
+					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); ?><?php printAlbumBreadcrumb('', ' » '); ?><?php printImageTitle(); ?>
 				</h2>
 			</div>
 
@@ -43,7 +41,7 @@
 				<?php } ?>
 			</div>
 
-			<div id="image-title"><?php printImageTitle(true); ?></div>
+			<div id="image-title"><?php printImageTitle(); ?></div>
 
 			<div id="image-infos"><?php printImageDesc(true); ?></div>
 
@@ -69,7 +67,7 @@
 			<div class="googlemap"><?php printGoogleMap(NULL, 'googlemap'); ?></div>
 			<?php } ?>
 
-			<?php include('inc_print_comment.php'); ?>
+			<?php if (function_exists('printCommentForm')) {include('inc_print_comment.php');} ?>
 
 		</div>	<!-- content -->
 

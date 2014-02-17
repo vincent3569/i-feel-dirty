@@ -1,4 +1,7 @@
-<?php include ('inc_header.php'); ?>
+<?php
+if (!class_exists('Zenpage')) die();
+include ('inc_header.php');
+?>
 
 	<div class="main">
 		<div class="content">
@@ -47,7 +50,7 @@
 						<?php printTags('links', NULL, 'taglist', ''); ?>
 					</div>
 
-					<?php include('inc_print_comment.php'); ?>
+					<?php if (function_exists('printCommentForm')) {include('inc_print_comment.php');} ?>
 
 				</div>
 

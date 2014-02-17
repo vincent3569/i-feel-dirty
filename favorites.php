@@ -11,13 +11,21 @@
 					<?php } else { ?>
 						<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
 					<?php } ?>
-					&raquo;&nbsp;<?php printAlbumTitle(true); ?>
+					&raquo;&nbsp;<?php printAlbumTitle(); ?>
 				</h2>
 			</div>
 
 			<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
 
-			<div class="album-desc clearfix"><?php printAlbumDesc(true); ?></div>
+			<div class="album-desc clearfix"><?php printAlbumDesc(); ?></div>
+
+			<?php if (function_exists('printSlideShowLink')) { ?>
+			<div class="control-nav">
+				<div class="control-slide">
+					<?php printSlideShowLink(gettext('Slideshow')); ?>
+				</div>
+			</div>
+			<?php } ?>
 
 			<?php if (isAlbumPage()) { ?>
 				<?php include('inc_print_album_thumb.php'); ?>

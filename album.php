@@ -5,13 +5,11 @@
 			<div id="breadcrumb">
 				<h2>
 					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
-					<?php if ((gettext(getOption('ifeeldirty_homepage')) == gettext('none')) && (!getOption('ifeeldirty_news_on_homepage'))) { ?>
-						<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo html_encode(getGalleryTitle()); ?></a>
-					<?php } else { ?>
-						<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
+					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+					<?php if ((class_exists('Zenpage')) && ((gettext(getOption('ifeeldirty_homepage')) <> gettext('none')) || (getOption('ifeeldirty_news_on_homepage')))) { ?>
+						&raquo;&nbsp;<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
 					<?php } ?>
-					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); ?><?php printAlbumTitle(true); ?>
+					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); ?><?php printAlbumTitle(); ?>
 				</h2>
 			</div>
 
@@ -23,7 +21,7 @@
 			</div>
 			<?php } ?>
 
-			<div class="album-desc clearfix"><?php printAlbumDesc(true); ?></div>
+			<div class="album-desc clearfix"><?php printAlbumDesc(); ?></div>
 
 			<?php if (isAlbumPage()) { ?>
 				<?php include('inc_print_album_thumb.php'); ?>
@@ -41,7 +39,8 @@
 			<div class="googlemap"><?php printGoogleMap(NULL, 'googlemap'); ?></div>
 			<?php } ?>
 
-			<?php include('inc_print_comment.php'); ?>
+			<?php if (function_exists('printCommentForm')) {include('inc_print_comment.php');} ?>
+
 
 		</div>	<!-- content -->
 

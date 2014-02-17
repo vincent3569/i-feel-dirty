@@ -11,13 +11,10 @@
 			<?php if (function_exists('printAlbumMenu')) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 				<h3><?php if (getGalleryTitle() <> NULL) {echo html_encode(getGalleryTitle()); } else {echo gettext('Gallery'); }; ?></h3>
-				<?php
-				$indexname = '';
-				if (getOption('zp_plugin_zenpage')) {
-					$indexname = gettext('Album index');
-				}
-				printAlbumMenu('list', false, '', 'menu-active', 'submenu', 'menu-active', $indexname, false, false);
-				?>
+				<ul><li>
+					<?php printCustomPageURL(gettext('Album index'), 'gallery'); ?>
+				</li></ul>
+				<?php printAlbumMenu('list', false, '', 'menu-active', 'submenu', 'menu-active', '', false, false); ?>
 			</div>
 			<?php } ?>
 
@@ -111,6 +108,14 @@
 							echo gettext('Register for this site');
 						}
 						?>
+					</li>
+				</ul>
+				<?php }	?>
+
+				<?php if ((zp_loggedin()) && (function_exists('printFavoritesLink'))) { ?>
+				<ul>
+					<li>
+						<?php printFavoritesLink(); ?>
 					</li>
 				</ul>
 				<?php }	?>
