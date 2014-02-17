@@ -8,7 +8,6 @@
 				</div>
 			<?php } ?>
 
-			<p><a href="http://studio.st/i-feel-dirty/">I feel dirty theme</a> by <a href="http://studio.st">Studio ST</a> and <a href="http://vincent.bourganel.free.fr">vincent3569</a></p>
 			<p><?php printZenphotoLink(); ?></p>
 		</div>
 
@@ -21,7 +20,7 @@
 
 	</div>	<!-- footer -->
 
-</div>	<!-- container -->
+</div>		<!-- container -->
 
 <?php
 printAdminToolbox();
@@ -29,4 +28,5 @@ zp_apply_filter('theme_body_close');
 ?>
 
 </body>
-</html>			<!-- i-feel-dirty 1.0 - a ZenPhoto/ZenPage theme by Studio ST and Vincent3569  --> 
+</html>
+<!-- i-feel-dirty 1.1 - a ZenPhoto/ZenPage theme by Studio ST and Vincent3569  --> 

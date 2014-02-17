@@ -1,4 +1,4 @@
-<?php include ('header.php'); ?>
+<?php include ('inc_header.php'); ?>
 
 	<div class="main">
 		<div class="content">
@@ -26,10 +26,10 @@
 			<div class="album-desc clearfix"><?php printAlbumDesc(true); ?></div>
 
 			<?php if (isAlbumPage()) { ?>
-				<?php include('print_album_thumb.php'); ?>
+				<?php include('inc_print_album_thumb.php'); ?>
 			<?php } ?>
 
-			<?php include('print_image_thumb.php'); ?>
+			<?php include('inc_print_image_thumb.php'); ?>
 
 			<?php printPageListWithNav(gettext('&laquo; prev'), gettext('next &raquo;'), false, true, 'pagelist', NULL, true, 7); ?>
 
@@ -37,12 +37,12 @@
 				<div class="googlemap"><?php printGoogleMap(NULL, 'googlemap'); ?></div>
 			<?php } ?>
 
-			<?php include('print_comment.php'); ?>
+			<?php include('inc_print_comment.php'); ?>
 
 		</div>	<!-- content -->
 
-	<?php include('sidebar.php'); ?>
+	<?php include('inc_sidebar.php'); ?>
 
 	</div>	<!-- main -->
 
-<?php include('footer.php'); ?>
+<?php include('inc_footer.php'); ?>

@@ -1,2 +1,15 @@
+* 1.1
+- css/style.css
+	- fix issue with flag selector
+- index.php :
+	- fix an issue : the title of the page was incorrect in some case
+- footer.php :
+	- remove some code
+- header.php :
+	- fix an issue : the title of the page was incorrect in some case
+	- fix an issue with rrs-news
+- footer.php, header.php, print_album_thumb.php, print_comment.php, print_image_thumb.php, print_news_loop.php, sidebar.php :
+	- prefix of filename with inc_ for more lisibility of the code
+
 * 1.0
 initial version

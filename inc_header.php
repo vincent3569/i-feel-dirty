@@ -23,16 +23,21 @@ setOption('personnal_thumb_image_number_col', '3', false);
 	<title>
 	<?php
 	echo getMainSiteName();
+	if (($_zp_gallery_page == 'index.php') && ($ishomepage)) {echo ' | '.gettext('Home'); }
+	if (($_zp_gallery_page == 'index.php') && ($isGallery)) {echo ' | '.gettext('Gallery'); }
+	if ($_zp_gallery_page == '404.php') {echo ' | '.gettext('Object not found'); }
 	if ($_zp_gallery_page == 'album.php') {echo ' | '.getBareAlbumTitle(); }
-	if ($_zp_gallery_page == 'image.php') {echo ' | '.getBareAlbumTitle().' | '.getBareImageTitle(); }
-	if ($_zp_gallery_page == 'contact.php') {echo ' | '.gettext('Contact'); }
 	if ($_zp_gallery_page == 'archive.php') {echo ' | '.gettext('Archive View'); }
-	if ($_zp_gallery_page == 'password.php') {echo ' | '.gettext('Password Required...'); }
-	if ($_zp_gallery_page == '404.php') {echo ' | '.gettext('404 Not Found...'); }
-	if ($_zp_gallery_page == 'search.php') {echo ' | '.gettext('Search'); }
-	if ($_zp_gallery_page == 'pages.php') {echo ' | '.getBarePageTitle(); }
+	if ($_zp_gallery_page == 'contact.php') {echo ' | '.gettext('Contact'); }
+	if ($_zp_gallery_page == 'gallery.php') {echo ' | '.gettext('Gallery'); }
+	if ($_zp_gallery_page == 'image.php') {echo ' | '.getBareAlbumTitle().' | '.getBareImageTitle(); }
+	if ($_zp_gallery_page == 'login.php') {echo ' | '.gettext('Login'); }
 	if ($_zp_gallery_page == 'news.php') {echo ' | '.gettext('News'); }
 	if (($_zp_gallery_page == 'news.php') && (is_NewsArticle())) {echo ' | '.getBareNewsTitle(); }
+	if ($_zp_gallery_page == 'pages.php') {echo ' | '.getBarePageTitle(); }
+	if ($_zp_gallery_page == 'password.php') {echo ' | '.gettext('Password Required...'); }
+	if ($_zp_gallery_page == 'register.php') {echo ' | '.gettext('Register'); }
+	if ($_zp_gallery_page == 'search.php') {echo ' | '.gettext('Search'); }
 	?>
 	</title>
 	<meta http-equiv="content-type" content="text/html; charset=<?php echo getOption('charset'); ?>" />
@@ -146,19 +151,17 @@ setOption('personnal_thumb_image_number_col', '3', false);
 			<div class="rsslink">
 			<?php
 				$lang = getOption('locale');
-				$icon = ' <img src="'. FULLWEBPATH . '/' . THEMEFOLDER . '/' . getOption('current_theme') . '/images/feedicon.gif" alt="RSS Feed" />';
-				echo '<a class="rssimg" href="'.WEBPATH.'/index.php?rss&lang='.$lang.'" title="'.gettext('Latest images RSS').'" rel="nofollow">'.$icon.'</a>';
-				echo '<a class="rsstext" href="'.WEBPATH.'/index.php?rss&lang='.$lang.'" title="'.gettext('Latest images RSS').'" rel="nofollow">'.gettext('Gallery').'</a>';
-				?>
+				$icon = ' <img src="' . FULLWEBPATH . '/' . THEMEFOLDER . '/' . getOption('current_theme') . '/images/feedicon.gif" alt="RSS Feed" />';
+				echo '<a class="rssimg" href="' . WEBPATH . '/index.php?rss&lang=' . $lang . '" title="' . gettext('Latest images RSS') . '" rel="nofollow">' . $icon . '</a>';
+				echo '<a class="rsstext" href="' . WEBPATH . '/index.php?rss&lang=' . $lang . '" title="' . gettext('Latest images RSS') . '" rel="nofollow">' . gettext('Gallery') . '</a>';
+			?>
 			</div>
 
 			<?php if (function_exists('printZenpageRSSLink')) { ?>
 			<div class="rsslink">
 			<?php
-				$lang = getOption('locale');
-				$icon = ' <img src="'. FULLWEBPATH . '/' . THEMEFOLDER . '/' . getOption('current_theme') . '/images/feedicon.gif" alt="RSS Feed" />';
-				echo '<a class="rssimg" href="'.WEBPATH.'/index.php?rss&lang='.$lang.'" title="'.gettext('NewsWithImages').'" rel="nofollow">'.$icon.'</a>';
-				echo '<a class="rsstext" href="'.WEBPATH.'/index.php?rss-news&withimages&lang='.$lang.'" title="'.gettext('NewsWithImages').'" rel="nofollow">'.gettext('News and Gallery').'</a>';
+				echo '<a class="rssimg" href="' . WEBPATH . '/index.php?rss-news&withimages&lang=' . $lang . '" title="' . gettext('NewsWithImages') . '" rel="nofollow">' . $icon . '</a>';
+				echo '<a class="rsstext" href="' . WEBPATH . '/index.php?rss-news&withimages&lang=' . $lang . '" title="' . gettext('NewsWithImages') . '" rel="nofollow">' . gettext('News and Gallery') . '</a>';
 			?>
 			</div>
 			<?php } ?>

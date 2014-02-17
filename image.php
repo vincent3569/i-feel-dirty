@@ -1,4 +1,4 @@
-<?php include ('header.php'); ?>
+<?php include ('inc_header.php'); ?>
 
 	<div class="main">
 		<div class="content-image">
@@ -64,7 +64,7 @@
 				<div class="googlemap"><?php printGoogleMap(NULL, 'googlemap'); ?></div>
 			<?php } ?>
 
-			<?php include('print_comment.php'); ?>
+			<?php include('inc_print_comment.php'); ?>
 
 		</div>	<!-- content -->
 
@@ -72,4 +72,4 @@
 
 	</div>	<!-- main -->
 
-<?php include('footer.php'); ?>
+<?php include('inc_footer.php'); ?>

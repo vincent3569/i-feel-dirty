@@ -5,8 +5,8 @@ Description: A clean but dirty template
 Author: Studio ST
 Author URI: http://studio.st/
 Adapted on ZenPhoto by: Vincent3569
-URI: http://vincent.bourganel.free.fr/zenphoto/
-Version 1.0 
+URI: http://www.vincentbourganel.fr
+Version 1.1 
 */
 
 /* --------- clear -----------*/
@@ -87,6 +87,14 @@ img {
 	float: left;
 	margin: 10px 0 0 6px;
 }
+.flags li {
+    padding: 4px 3px 2px 4px;
+}
+.currentLanguage {
+    border: 1px solid #9b0e0e;
+}
+.flags img {
+	vertical-align: top;
 }
 
 /*------------------------------------------------------------------------------
@@ -334,7 +342,7 @@ table.register_user td {
 }
 .googlemap {
 	text-align: center;
-	margin: 10px 20px;
+	margin: 10px 0;
 }
 #archive {
 	text-align: justify;

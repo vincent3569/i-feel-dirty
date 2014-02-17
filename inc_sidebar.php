@@ -45,7 +45,6 @@
 				<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 					<h3><?php echo gettext('Tags'); ?></h3>
 					<div class="tags-cloud">
-						<?php /*printAllTagsAs('cloud', 'hor-list', 'abc', false, true, 1.8, 30, 1, NULL, 1); */?>
 						<?php printAllTagsAs('cloud', 'hor-list', 'abc', false, true, 2.5, 30, 2, NULL, 0.8); ?>
 					</div>
 				</div>

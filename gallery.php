@@ -1,4 +1,4 @@
-<?php include ('header.php'); ?>
+<?php include ('inc_header.php'); ?>
 
 	<div class="main">
 		<div class="content">
@@ -18,12 +18,12 @@
 
 			<?php printPageListWithNav(gettext('&laquo; prev'), gettext('next &raquo;'), false, true, 'pagelist', NULL, true, 7); ?>
 
-			<?php include('print_album_thumb.php'); ?>
+			<?php include('inc_print_album_thumb.php'); ?>
 
 		</div>	<!-- content -->
 
-	<?php include('sidebar.php'); ?>
+	<?php include('inc_sidebar.php'); ?>
 
 	</div>	<!-- main -->
 
-<?php include('footer.php'); ?>
+<?php include('inc_footer.php'); ?>

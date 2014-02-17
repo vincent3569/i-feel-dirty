@@ -5,12 +5,15 @@ if (function_exists('checkForPage')) { // check if Zenpage is enabled or not
 		include ('pages.php');
 	} else {
 		if (getOption('ifeeldirty_news_on_homepage')) { // switch to news page
+			$ishomepage = true;
 			include ('news.php');
 		} else {
+			$isGallery = true;
 			include ('gallery.php');
 		}
 	}
 } else {
+	$isGallery = true;
 	include ('gallery.php');
 }
 ?>
