@@ -1,3 +1,41 @@
+* 1.4.3
+- css/style.css :
+	- graphical improvements
+- locale/
+	- add Dutch translation: thanks to Fred Sondaar (fretzl)
+	- update German translation: thanks to Malte Müller (acrylian)
+- 404.php :
+	- fix High-Tech Bridge security isue (http://www.zenphoto.org/trac/changeset/8994)
+- 404.php, albums.php, archive.php, contact.php, gallery.php, image.php, news.php, page.php, password.php, register.php, search.php :
+	- fix typo on breadcrumb
+	- fix html encoding
+	- fix an issue : set $relative to false in getGalleryIndexURL()
+- news.php :
+	- fix translation issue : add translation for 'news' on breadcrumb
+	- fix translation issue : add translation for 'category' on news filter
+	- remove news title on breadcrumb
+- inc_header.php :
+	- fix an issue : use only $isHomePage variable to avoid warning of unknown value
+	- fix an issue on RSS Feed : use options 'RSS_album_image' and 'RSS_articles'
+	- clean some code
+	- personnal_thumb_album_number_col and personnal_thumb_image_number_col options are deprecated (instead use standard options)
+- inc_print_album_thumb.php
+	- fix an issue  with 1.4.3 : missing some '' on options
+	- personnal_thumb_album_number_col option is deprecated (instead use standard option)
+- inc_print_image_thumb.php
+	- fix an issue  with 1.4.3 : code cleanup on next_image()
+	- personnal_thumb_image_number_col option is deprecated (instead use standard option)
+- inc_sidebar.php
+	- add a link to gallery index
+- index.php
+	- fix an issue with 1.4.3 : use only isHomePage variable to avoid warning of unknown value
+- slideshow.php
+	- this file is deprecated (theme supports only colorbox slideshow : think to change options of slideshow plugin)
+- themeoptions.php :
+	- set some options (ie : albums_per_row, albums_per_page, images_per_row, images_per_page, colorbox_js)
+	- use SetOption instead SetOptionDefault for some options (in order to force the value of the options)
+
+
 * 1.4.2
 - css/screen.css :
 	- graphical improvements

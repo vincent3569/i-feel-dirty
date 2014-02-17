@@ -4,18 +4,18 @@
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' &raquo; '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(/*false*/)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;&nbsp;
+					<?php printHomeLink('', ' » '); ?>
+					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
 					<?php if ((gettext(getOption('ifeeldirty_homepage')) == gettext('none')) && (!getOption('ifeeldirty_news_on_homepage'))) { ?>
-						<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo getGalleryTitle(); ?></a>
+						<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo html_encode(getGalleryTitle()); ?></a>
 					<?php } else { ?>
 						<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
 					<?php } ?>
-					<?php printParentBreadcrumb(' &raquo; ', ' &raquo; ', ' &raquo; '); ?><?php printAlbumTitle(true); ?>
+					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); ?><?php printAlbumTitle(true); ?>
 				</h2>
 			</div>
 
-			<?php printPageListWithNav(gettext('&laquo; prev'), gettext('next &raquo;'), false, true, 'pagelist', NULL, true, 7); ?>
+			<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
 
 			<?php if (function_exists('printSlideShowLink')) { ?>
 			<div class="img-slide clearfix">
@@ -31,10 +31,10 @@
 
 			<?php include('inc_print_image_thumb.php'); ?>
 
-			<?php printPageListWithNav(gettext('&laquo; prev'), gettext('next &raquo;'), false, true, 'pagelist', NULL, true, 7); ?>
+			<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
 
 			<?php if (function_exists('printGoogleMap')) { ?>
-				<div class="googlemap"><?php printGoogleMap(NULL, 'googlemap'); ?></div>
+			<div class="googlemap"><?php printGoogleMap(NULL, 'googlemap'); ?></div>
 			<?php } ?>
 
 			<?php include('inc_print_comment.php'); ?>

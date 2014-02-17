@@ -4,8 +4,8 @@
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' &raquo; '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(/*false*/)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+					<?php printHomeLink('', ' » '); ?>
+					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
 				</h2>
 			</div>
 
@@ -15,9 +15,9 @@
 				</div>
 
 				<?php if (getPageExtraContent()) { ?>
-					<div class="extra-content">
-						<?php printPageExtraContent(); ?>
-					</div>
+				<div class="extra-content">
+					<?php printPageExtraContent(); ?>
+				</div>
 				<?php } ?>
 
 				<div class="entrytext clearfix">

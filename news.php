@@ -4,13 +4,14 @@
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' &raquo; '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(/*false*/)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
-					<?php printNewsIndexURL('News', ' &raquo; '); ?><?php printCurrentNewsCategory(' &raquo; Cat&eacute;gorie : '); ?><?php printNewsTitle(' &raquo; '); printCurrentNewsArchive(' | '); ?>
+					<?php printHomeLink('', ' » '); ?>
+					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+					<?php printNewsIndexURL(gettext('News'), ' » '); ?><?php printCurrentNewsCategory(' » ' . gettext('Category') . ' : '); ?><?php printCurrentNewsArchive(' » '); ?>
 				</h2>
 			</div>
 
-			<?php  if (is_NewsArticle()) {
+			<?php
+			if (is_NewsArticle()) {
 
 				// single news article ?>
 				<?php if ((getPrevNewsURL()) || (getNextNewsURL())) { ?>
@@ -50,11 +51,13 @@
 
 				</div>
 
-			<?php } else {
+			<?php
+			} else {
 				
 				// news article loop
 				include('inc_print_news_loop.php');
-			} ?>
+			}
+			?>
 
 		</div>	<!-- content -->
 

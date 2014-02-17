@@ -11,14 +11,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: gettext_th\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-SearchPath-0: C:\\Users\\Famille\\Documents\\_Vincent\\Site Internet\\Galerie photo\\themes\\i-feel-dirty\n"
+"X-Poedit-SearchPath-0: C:\\Users\\Famille\\Documents\\_Vincent\\Site Internet\\Galerie photo\\zenphoto\\themes\\i-feel-dirty\n"
 
 #: C:\Users\Famille\Documents\_Vincent\Site
 #: Internet\Galerie
-#: photo\themes\i-feel-dirty/footer.php:44
+#: photo\zenphoto\themes\zpArdoise/footer.php:44
 msgid "You can browse with the arrows keys of your keyboard"
-msgstr "Sie können mit den Pfeiltasten der Tastatur navigieren"
+msgstr "Je kunt de pijltjestoetsen gebruiken om te navigeren"
 

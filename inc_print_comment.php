@@ -1,4 +1,5 @@
-	<?php switch ($_zp_gallery_page) {
+	<?php
+	switch ($_zp_gallery_page) {
 		case 'album.php':
 			$comments_open = getOption('comment_form_albums');
 			$comments_allowed = getCommentsAllowed();
@@ -18,17 +19,20 @@
 		default:
 			return;
 			break;
-	} ?>
+	}
+	?>
 
 	<?php if ((function_exists('printCommentForm')) && ($comments_open)) { ?>
 		<?php if ($comments_allowed || (getCommentCount() > 0)) { ?>
 			<a class="fadetoggler clr"><img src="<?php echo $_zp_themeroot; ?>/images/comment.gif" alt="icon-comment" id="icon-comment" />
-			<?php $num = getCommentCount();
+			<?php
+			$num = getCommentCount();
 			if ($num == 0) {
 				echo gettext('No Comments');
 			} else {
 				echo sprintf(ngettext('%u Comment', '%u Comments', $num), $num);
-			} ?>
+			}
+			?>
 			</a>
 			<div id="comment-wrap" class="fader clearfix">
 				<?php printCommentForm(true, NULL, true); ?>

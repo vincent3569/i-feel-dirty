@@ -1,6 +1,6 @@
 				<?php // news article loop ?>
 
-				<?php printNewsPageListWithNav(gettext('next &raquo;'), gettext('&laquo; prev')); ?>
+				<?php printNewsPageListWithNav(gettext('next »'), gettext('« prev')); ?>
 
 				<?php while (next_news()): ; ?>
 				<div class="post clearfix">
@@ -18,4 +18,4 @@
 				</div>
 				<?php endwhile; ?>
 
-				<?php printNewsPageListWithNav(gettext('next &raquo;'), gettext('&laquo; prev')); ?>
+				<?php printNewsPageListWithNav(gettext('next »'), gettext('« prev')); ?>

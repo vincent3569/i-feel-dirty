@@ -6,7 +6,7 @@ Author: Studio ST
 Author URI: http://studio.st/
 Adapted on ZenPhoto by: Vincent3569
 URI: http://www.vincentbourganel.fr
-Version 1.4.2
+Version 1.4.3
 */
 
 /* --------- clear -----------*/
@@ -731,17 +731,22 @@ ul.pagelist li.next {
 #search_input {
 	width: 100px;
 }
-#search ul {
+#searchextrashow{
 	background: url("../images/cntbg.gif") repeat-y;
 	position: absolute;
 	text-align: left;
-	list-style: none;
+	z-index: 1000;
+	margin-top: 3px;
 	overflow: visible;
-	padding: 5px 0 0;
+	padding: 5px 10px;
+}
+#search ul {
+	list-style: none;
+	padding: 10px 0 0 10px;
 }
 #search li {
 	width: 150px;
-	margin: 0 0 5px 15px;
+	margin-bottom: 5px;
 	padding: 0;
 	color: #000;
 }
@@ -754,7 +759,7 @@ ul.pagelist li.next {
 	padding: 0;
 }
 
-/* password */
+/* password and register */
 #passwordform {
 	background: #E2EBED;
 	margin: 0 auto;
@@ -770,21 +775,22 @@ ul.pagelist li.next {
 	width: 300px;
 	margin: 0 auto 10px;
 }
-#loginform fieldset {
+#registration_form {
+	margin: 0 auto;
+	width: 400px;
+}
+#loginform fieldset, #registration_form fieldset {
 	border: 1px solid #bbb;
 	padding: 10px;
 	line-height: 20px;
 	margin-bottom: 5px;
 	border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; -webkit-border-radius: 5px;
 }
-#loginform legend {
+#loginform legend, #registration_form legend {
 	color: #333;
 }
 #loginform input.textfield {
-	font-size: 100%;
-	margin: 0;
-	padding: 4px;
-	width: 180px;
+	width: 250px;
 }
 div.buttons {
 	margin-left: 10px;
@@ -863,6 +869,19 @@ div.buttons {
 .footer2 a:hover {
 	background-color: #294a59;
 	text-decoration: none;
+}
+#zen-part {
+	font-family: "Century Gothic", Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: 100;
+	letter-spacing: -1px;
+	text-transform: lowercase;
+}
+#photo-part {
+	font-family: "Century Gothic", Arial, sans-serif;
+	font-size: 0.9em;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 .nav-info {
 	float: right;

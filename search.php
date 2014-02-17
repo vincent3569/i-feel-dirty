@@ -4,14 +4,14 @@
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' &raquo; '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(/*false*/)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;&nbsp;
+					<?php printHomeLink('', ' » '); ?>
+					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
 					<?php if ((gettext(getOption('ifeeldirty_homepage')) == gettext('none')) && (!getOption('ifeeldirty_news_on_homepage'))) { ?>
-						<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo getGalleryTitle(); ?></a>
+						<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo html_encode(getGalleryTitle()); ?></a>
 					<?php } else { ?>
 						<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
 					<?php } ?>
-					&nbsp;&raquo;&nbsp;<?php echo '<em>'.gettext('Recherche').'</em>'; ?>
+					&raquo;&nbsp;<?php echo '<em>'.gettext('Recherche').'</em>'; ?>
 				</h2>
 			</div>
 
@@ -40,9 +40,9 @@
 			?>
 
 			<div class="search-result">
-				<p><?php printf(ngettext('%1$u Hit for <em>%2$s</em>', '%1$u Hits for <em>%2$s</em>', $total), $total, $searchwords); ?></p>
+				<p><?php printf(ngettext('%1$u Hit for <em>%2$s</em>', '%1$u Hits for <em>%2$s</em>', $total), $total, html_encode($searchwords)); ?></p>
 				<?php if ($total == 0) { ?>
-					<p><?php echo gettext("Sorry, no matches found. Try refining your search."); ?></p>
+				<p><?php echo gettext("Sorry, no matches found. Try refining your search."); ?></p>
 				<?php } ?>
 			</div>
 
@@ -62,9 +62,10 @@
 							echo'<ul class="search-item"><li>'; printf(gettext('Albums (%1$s) &amp; Images (%2$s)'), $numalbums, $numimages); echo'</li></ul>';
 						}
 					}
-				} ?>
+				}
+				?>
 
-				<?php printPageListWithNav(gettext('&laquo; prev'), gettext('next &raquo;'), false, true, 'pagelist', NULL, true, 7); ?>
+				<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
 
 				<?php if (function_exists('printSlideShowLink')) { ?>
 				<div class="img-slide clearfix">

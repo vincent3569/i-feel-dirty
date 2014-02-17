@@ -11,11 +11,15 @@ require_once(SERVERPATH . '/' . ZENFOLDER . '/admin-functions.php');
 class ThemeOptions {
 
 	function ThemeOptions() {
-		setThemeOptionDefault('thumb_size', '120');
-		setThemeOptionDefault('thumb_crop', '1');
-		setThemeOptionDefault('thumb_crop_width', '120');
-		setThemeOptionDefault('thumb_crop_height', '120');
-		setThemeOptionDefault('image_size', '700');
+		setThemeOption('albums_per_row', '2', NULL, 'i-feel-dirty');
+		setThemeOptionDefault('albums_per_page', '8');
+		setThemeOption('images_per_row', '3', NULL, 'i-feel-dirty');
+		setThemeOptionDefault('images_per_page', '12');
+		setThemeOption('thumb_size', '120', NULL, 'i-feel-dirty');
+		setThemeOption('thumb_crop', '1', NULL, 'i-feel-dirty');
+		setThemeOption('thumb_crop_width', '120', NULL, 'i-feel-dirty');
+		setThemeOption('thumb_crop_height', '120', NULL, 'i-feel-dirty');
+		setThemeOption('image_size', '700', NULL, 'i-feel-dirty');
 		setThemeOptionDefault('image_use_side', 'longest');
 		setThemeOptionDefault('custom_index_page', '');
 		
@@ -29,23 +33,23 @@ class ThemeOptions {
 		setThemeOptionDefault('show_tag_cloud', true);
 		setThemeOptionDefault('use_colorbox_image', false);
 
-		setOption('zp_plugin_print_album_menu', 129, true);
-		setOption('zp_plugin_colorbox', 129, true);
-		setOptionDefault('colorbox_i-feel-dirty_album', 1);
-		setOptionDefault('colorbox_i-feel-dirty_archive', 1);
-		setOptionDefault('colorbox_i-feel-dirty_contact', 1);
-		setOptionDefault('colorbox_i-feel-dirty_gallery', 1);
-		setOptionDefault('colorbox_i-feel-dirty_image', 1);
-		setOptionDefault('colorbox_i-feel-dirty_index', 1);
-		setOptionDefault('colorbox_i-feel-dirty_news', 1);
-		setOptionDefault('colorbox_i-feel-dirty_pages', 1);
-		setOptionDefault('colorbox_i-feel-dirty_password', 1);
-		setOptionDefault('colorbox_i-feel-dirty_register', 1);
-		setOptionDefault('colorbox_i-feel-dirty_search', 1);
+		setOption('zp_plugin_print_album_menu', 129);
+		setOption('zp_plugin_colorbox_js', 129);
+		setOption('colorbox_i-feel-dirty_album', 1);
+		setOption('colorbox_i-feel-dirty_archive', 1);
+		setOption('colorbox_i-feel-dirty_contact', 1);
+		setOption('colorbox_i-feel-dirty_gallery', 1);
+		setOption('colorbox_i-feel-dirty_image', 1);
+		setOption('colorbox_i-feel-dirty_index', 1);
+		setOption('colorbox_i-feel-dirty_news', 1);
+		setOption('colorbox_i-feel-dirty_pages', 1);
+		setOption('colorbox_i-feel-dirty_password', 1);
+		setOption('colorbox_i-feel-dirty_register', 1);
+		setOption('colorbox_i-feel-dirty_search', 1);
 	}
 
 	function getOptionsDisabled() {
-		return array('thumb_size', /*'thumb_crop', 'thumb_crop_width', 'thumb_crop_height',*/ 'image_size', 'custom_index_page');
+		return array('thumb_size', 'image_size', 'custom_index_page');
 	}
 
 	function getOptionsSupported() {

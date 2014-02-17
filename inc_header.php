@@ -4,27 +4,26 @@
 
 if (!defined('WEBPATH')) die();
 
-setOption('thumb_crop', '1', false);
-setOption('thumb_crop_width', '120', false);
-setOption('thumb_crop_height', '120', false);
-
 setOption('personnal_thumb_width', '200', false);
 setOption('personnal_thumb_height', '120', false);
 
+/*
 setOption('personnal_thumb_album_number_col', '2', false);
 setOption('personnal_thumb_image_number_col', '3', false);
+*/
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<meta http-equiv="content-type" content="text/html; charset=<?php echo getOption('charset'); ?>" />
 	<?php zp_apply_filter('theme_head'); ?>
 	<title>
 	<?php
 	echo getMainSiteName();
-	if (($_zp_gallery_page == 'index.php') && ($ishomepage)) {echo ' | '.gettext('Home'); }
-	if (($_zp_gallery_page == 'index.php') && ($isGallery)) {echo ' | '.gettext('Gallery'); }
+	if (($_zp_gallery_page == 'index.php') && ($isHomePage)) {echo ' | '.gettext('Home'); }
+	if (($_zp_gallery_page == 'index.php') && (!$isHomePage)) {echo ' | '.gettext('Gallery'); }
 	if ($_zp_gallery_page == '404.php') {echo ' | '.gettext('Object not found'); }
 	if ($_zp_gallery_page == 'album.php') {echo ' | '.getBareAlbumTitle(); }
 	if ($_zp_gallery_page == 'archive.php') {echo ' | '.gettext('Archive View'); }
@@ -40,11 +39,16 @@ setOption('personnal_thumb_image_number_col', '3', false);
 	if ($_zp_gallery_page == 'search.php') {echo ' | '.gettext('Search'); }
 	?>
 	</title>
-	<meta http-equiv="content-type" content="text/html; charset=<?php echo getOption('charset'); ?>" />
-	<?php printRSSHeaderLink('Gallery', gettext('Latest images RSS')); ?>
-	<?php if (function_exists('printZenpageRSSHeaderLink')) { ?>
-		<?php printZenpageRSSHeaderLink('NewsWithImages', gettext('News and Gallery RSS'), '', ''); ?>
-	<?php } ?>
+
+	<?php
+	if (getOption('RSS_album_image')) {
+		printRSSHeaderLink('Gallery', gettext('Latest images RSS'));
+	}
+	if ((getOption('RSS_articles')) && (function_exists('printZenpageRSSHeaderLink'))) {
+		printZenpageRSSHeaderLink('NewsWithImages', '', gettext('News and Gallery RSS'));
+	}
+	?>
+
 	<link rel="stylesheet" href="<?php echo $_zp_themeroot; ?>/css/style.css" type="text/css" media="screen"/>
 	<link rel="shortcut icon" href="<?php echo $_zp_themeroot; ?>/images/faviconst.ico" />
 
@@ -56,8 +60,8 @@ setOption('personnal_thumb_image_number_col', '3', false);
 	//<![CDATA[
 		<?php $NextURL = $PrevURL = false; ?>
 		<?php if ($_zp_gallery_page == 'image.php') { ?>
-			<?php if (hasNextImage()) { ?>var nextURL = "<? echo getNextImageURL(); $NextURL = true; ?>";<?php } ?>
-			<?php if (hasPrevImage()) { ?>var prevURL = "<? echo getPrevImageURL(); $PrevURL = true; ?>";<?php } ?>
+			<?php if (hasNextImage()) { ?>var nextURL = "<? echo html_encode(getNextImageURL()); $NextURL = true; ?>";<?php } ?>
+			<?php if (hasPrevImage()) { ?>var prevURL = "<? echo html_encode(getPrevImageURL()); $PrevURL = true; ?>";<?php } ?>
 		<?php } else { ?>
 			<?php if ((function_exists('checkForPage')) && (is_NewsArticle())) { ?>
 				<?php if (getNextNewsURL()) { $article_url = getNextNewsURL(); ?>var nextURL = "<?php echo html_decode($article_url['link']); $NextURL = true; ?>";<?php } ?>
@@ -130,10 +134,6 @@ setOption('personnal_thumb_image_number_col', '3', false);
 	</script>
 	<?php } ?>
 
-	<!--
-	<script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
-	-->
-
 </head>
 
 <body>
@@ -148,22 +148,26 @@ setOption('personnal_thumb_image_number_col', '3', false);
 		</div>	<!-- head1 -->
 
 		<div class="head2">
-			<div class="rsslink">
-			<?php
-				$lang = getOption('locale');
-				$icon = ' <img src="' . FULLWEBPATH . '/' . THEMEFOLDER . '/' . getOption('current_theme') . '/images/feedicon.gif" alt="RSS Feed" />';
-				echo '<a class="rssimg" href="' . WEBPATH . '/index.php?rss&lang=' . $lang . '" title="' . gettext('Latest images RSS') . '" rel="nofollow">' . $icon . '</a>';
-				echo '<a class="rsstext" href="' . WEBPATH . '/index.php?rss&lang=' . $lang . '" title="' . gettext('Latest images RSS') . '" rel="nofollow">' . gettext('Gallery') . '</a>';
-			?>
-			</div>
 
-			<?php if (function_exists('printZenpageRSSLink')) { ?>
+			<?php $rss_feed = false; ?>
+			<?php if (getOption('RSS_album_image')) { ?>
 			<div class="rsslink">
-			<?php
-				echo '<a class="rssimg" href="' . WEBPATH . '/index.php?rss-news&withimages&lang=' . $lang . '" title="' . gettext('NewsWithImages') . '" rel="nofollow">' . $icon . '</a>';
-				echo '<a class="rsstext" href="' . WEBPATH . '/index.php?rss-news&withimages&lang=' . $lang . '" title="' . gettext('NewsWithImages') . '" rel="nofollow">' . gettext('News and Gallery') . '</a>';
-			?>
+				<?php printRSSLink('Gallery', '', '', '', false, 'rssimg'); $rss_feed = true; ?>
+				<?php printRSSLink('Gallery', '', gettext('Gallery'), '', false, 'rsstext'); ?>
 			</div>
+			<?php } ?>
+			<?php if ((getOption('RSS_articles')) && (function_exists('printZenpageRSSLink'))) { ?>
+			<div class="rsslink">
+				<?php printZenpageRSSLink('NewsWithImages', '', '', '', '', false, 'rssimg'); $rss_feed = true; ?>
+				<?php printZenpageRSSLink('NewsWithImages', '', '', gettext('News and Gallery'), '', false, 'rsstext'); ?>
+			</div>
+			<?php } ?>
+			<?php if ($rss_feed) { ?>
+				<script type="text/javascript">
+				//<![CDATA[
+					$('.rssimg').prepend('<img alt="RSS Feed" src="<?php echo $_zp_themeroot; ?>/images/feedicon.gif">');
+				//]]>
+				</script>
 			<?php } ?>
 
 			<?php if (function_exists('printLanguageSelector')) { ?>
