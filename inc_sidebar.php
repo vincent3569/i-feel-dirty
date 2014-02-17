@@ -18,7 +18,7 @@
 			</div>
 			<?php } ?>
 
-			<?php if ((function_exists('printAllNewsCategories')) && (getNumNews() > 0)) { ?>
+			<?php if ((function_exists('printAllNewsCategories')) && (getNumNews(true) > 0)) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 				<h3><?php echo gettext('News articles'); ?></h3>
 				<?php printAllNewsCategories(gettext('All news'), true, 'news-cat-list', 'menu-active'); ?>

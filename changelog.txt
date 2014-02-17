@@ -1,3 +1,8 @@
+* 1.4.5.1
+- inc_sidebar.php :
+	- fix issue introduced by Zenphoto 1.4.5.8
+
+
 * 1.4.5
 - css/style.css :
 	- fix issue on button css rules (to avoid overwriting between i-feel-dirty css rules and colorbox css 1.4.5 rules)
@@ -70,10 +75,10 @@
 	- clean some code
 	- personnal_thumb_album_number_col and personnal_thumb_image_number_col options are deprecated (instead use standard options)
 - inc_print_album_thumb.php
-	- fix an issue  with 1.4.3 : missing some '' on options
+	- fix an issue with 1.4.3 : missing some '' on options
 	- personnal_thumb_album_number_col option is deprecated (instead use standard option)
 - inc_print_image_thumb.php
-	- fix an issue  with 1.4.3 : code cleanup on next_image()
+	- fix an issue with 1.4.3 : code cleanup on next_image()
 	- personnal_thumb_image_number_col option is deprecated (instead use standard option)
 - inc_sidebar.php
 	- add a link to gallery index
