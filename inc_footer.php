@@ -13,6 +13,9 @@
 
 		<div class="footer2">
 			<?php
+			if (function_exists('printFavoritesLink')) {
+				printFavoritesLink(); echo ' | ';
+			}
 			printCustomPageURL(gettext('Archive View'), 'archive', '', '');
 			if (function_exists('printContactForm')) {
 				printCustomPageURL(gettext('Contact'), 'contact', '', ' | ');
@@ -29,4 +32,4 @@
 
 </body>
 </html>
-<!-- i-feel-dirty 1.4.3 - a ZenPhoto/ZenPage theme by Studio ST and Vincent3569  --> 
+<!-- i-feel-dirty 1.4.4 - a ZenPhoto/ZenPage theme by Studio ST and Vincent3569 -->

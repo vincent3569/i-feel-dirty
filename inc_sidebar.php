@@ -96,11 +96,9 @@
 
 			<?php if (function_exists('printUserLogin_out')) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
-				<h3><?php echo gettext('Log in'); ?></h3>
+				<h3><?php echo gettext('user'); ?></h3>
 				<ul>
-					<li>
-						<?php printUserLogin_out('', '', 2); ?>
-					</li>
+					<li><?php printUserLogin_out('', '', 2); ?></li>
 				</ul>
 
 				<?php if ((!zp_loggedin()) && (function_exists('printRegistrationForm'))) { ?>

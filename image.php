@@ -35,9 +35,9 @@
 			<?php } ?>
 
 			<div id="image">
-				<?php if (getOption('use_colorbox_image')) { ?>
-					<?php /* to do : display full image or sized image */ ?>
-					<a rel="zoom" href="<?php echo html_encode(getUnprotectedImageURL()); ?>" title="<?php echo getBareImageTitle(); ?>"><?php printDefaultSizedImage(getImageTitle()); ?></a>
+				<?php $fullimage = getFullImageURL(); ?>
+				<?php if ((getOption('use_colorbox_image')) && (!empty($fullimage))) { ?>
+					<a rel="zoom" href="<?php echo html_encode($fullimage); ?>" title="<?php echo getBareImageTitle(); ?>"><?php printDefaultSizedImage(getImageTitle()); ?></a>
 				<?php } else { ?>
 					<?php printDefaultSizedImage(getImageTitle()); ?>
 				<?php } ?>
@@ -56,6 +56,10 @@
 				<?php printTags('links', NULL, 'taglist', ''); ?>
 				<div class="clearfix"></div>
 			</div>
+
+			<?php if (function_exists('printAddToFavorites')) { ?>
+				<div class="favorites"><?php printAddToFavorites($_zp_current_image); ?></div>
+			<?php } ?>
 
 			<?php if (function_exists('printRating')) { ?>
 			<div class="rating"><?php printRating(); ?></div>

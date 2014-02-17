@@ -11,17 +11,11 @@
 					<?php } else { ?>
 						<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
 					<?php } ?>
-					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); ?><?php printAlbumTitle(true); ?>
+					&raquo;&nbsp;<?php printAlbumTitle(true); ?>
 				</h2>
 			</div>
 
 			<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
-
-			<?php if (function_exists('printSlideShowLink')) { ?>
-			<div class="img-slide clearfix">
-				<?php printSlideShowLink(gettext('Slideshow')); ?>
-			</div>
-			<?php } ?>
 
 			<div class="album-desc clearfix"><?php printAlbumDesc(true); ?></div>
 
@@ -32,16 +26,6 @@
 			<?php include('inc_print_image_thumb.php'); ?>
 
 			<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
-
-			<?php if (function_exists('printAddToFavorites')) { ?>
-			<div class="favorites"><?php printAddToFavorites($_zp_current_album); ?></div>
-			<?php } ?>
-
-			<?php if (function_exists('printGoogleMap')) { ?>
-			<div class="googlemap"><?php printGoogleMap(NULL, 'googlemap'); ?></div>
-			<?php } ?>
-
-			<?php include('inc_print_comment.php'); ?>
 
 		</div>	<!-- content -->
 

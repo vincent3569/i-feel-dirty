@@ -1,8 +1,31 @@
+* 1.4.4
+- css/style.css :
+	- graphical improvements to be compliant with zenphoto 1.4.4
+- js/i-feel-dirty.js :
+	- fix an issue : force to open comment box if there is a note
+- album.php :
+	- use getFullImageURL() rather than getUnprotectedImageURL() to offer zenphoto capabilities on displaying protected image
+	- improvement to support favorites handler
+- image.php :
+	- use getFullImageURL() rather than getUnprotectedImageURL() to offer zenphoto capabilities on displaying protected image
+	- improvement to support favorites handler
+- inc_footer.php
+	- improvement to support favorites handler
+- inc_sidebar.php
+	- clean some code
+- themeoptions.php :
+	- fix an issue when saving ifeeldirty_homepage option
+	- fix an issue when evaluating "none" value of ifeeldirty_homepage option
+	- fix an issue when seting colorbox_js plugin and print_album_menu
+	- improvement to support favorites handler
+
+
 * 1.4.3
 - css/style.css :
 	- graphical improvements
 - locale/
 	- add Dutch translation: thanks to Fred Sondaar (fretzl)
+	- add Polish translation: thanks to Pawel Kowalczyk
 	- update German translation: thanks to Malte Müller (acrylian)
 - 404.php :
 	- fix High-Tech Bridge security isue (http://www.zenphoto.org/trac/changeset/8994)
@@ -10,10 +33,6 @@
 	- fix typo on breadcrumb
 	- fix html encoding
 	- fix an issue : set $relative to false in getGalleryIndexURL()
-- news.php :
-	- fix translation issue : add translation for 'news' on breadcrumb
-	- fix translation issue : add translation for 'category' on news filter
-	- remove news title on breadcrumb
 - inc_header.php :
 	- fix an issue : use only $isHomePage variable to avoid warning of unknown value
 	- fix an issue on RSS Feed : use options 'RSS_album_image' and 'RSS_articles'
@@ -29,6 +48,10 @@
 	- add a link to gallery index
 - index.php
 	- fix an issue with 1.4.3 : use only isHomePage variable to avoid warning of unknown value
+- news.php :
+	- fix translation issue : add translation for 'news' on breadcrumb
+	- fix translation issue : add translation for 'category' on news filter
+	- remove news title on breadcrumb
 - slideshow.php
 	- this file is deprecated (theme supports only colorbox slideshow : think to change options of slideshow plugin)
 - themeoptions.php :

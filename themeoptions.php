@@ -33,11 +33,12 @@ class ThemeOptions {
 		setThemeOptionDefault('show_tag_cloud', true);
 		setThemeOptionDefault('use_colorbox_image', false);
 
-		setOption('zp_plugin_print_album_menu', 129);
-		setOption('zp_plugin_colorbox_js', 129);
+		setOption('zp_plugin_print_album_menu', 9|THEME_PLUGIN);
+		setOption('zp_plugin_colorbox_js', 9|THEME_PLUGIN);
 		setOption('colorbox_i-feel-dirty_album', 1);
 		setOption('colorbox_i-feel-dirty_archive', 1);
 		setOption('colorbox_i-feel-dirty_contact', 1);
+		setOption('colorbox_i-feel-dirty_favorites', 1);
 		setOption('colorbox_i-feel-dirty_gallery', 1);
 		setOption('colorbox_i-feel-dirty_image', 1);
 		setOption('colorbox_i-feel-dirty_index', 1);
@@ -68,21 +69,23 @@ class ThemeOptions {
 
 	function handleOption($option, $currentValue) {
 		if ($option == 'ifeeldirty_homepage') {
-			$unpublishedpages = query_full_array("SELECT titlelink FROM ".prefix('pages')." WHERE `show` != 1 ORDER by `sort_order`");
+			$unpublishedpages = query_full_array("SELECT titlelink FROM " . prefix('pages') . " WHERE `show` != 1 ORDER by `sort_order`");
 			if (empty($unpublishedpages)) {
 				echo gettext("No unpublished pages available");
 				// clear option if no unpublished pages are available or have been published meanwhile
 				// so that the normal gallery index appears and no page is accidentally set if set to unpublished again.
-				setOption("ifeeldirty_homepage", "none", true);
+				setThemeOption('zenpage_homepage', 'none', NULL, 'i-feel-dirty');
 			} else {
-				echo '<input type="hidden" name="'.CUSTOM_OPTION_PREFIX.'selector-zenpage_homepage" value=0 />' . "\n";
-				echo '<select id="'.$option.'" name="ifeeldirty_homepage">'."\n";
-				if ($currentValue == "none") {
-					$selected = " selected = 'selected'";
+				echo '<input type="hidden" name="' . CUSTOM_OPTION_PREFIX . 'selector-zenpage_homepage" value=0 />' . "\n";
+				echo '<select id="' . $option . '" name="' . $option . '">' . "\n";
+
+				echo '<option value="none"';
+				if ($currentValue == 'none') {
+					echo ' selected="selected">' . gettext("none") . '</option>\n';
 				} else {
-					$selected = "";
+					echo '>' . gettext("none") . '</option>\n';
 				}
-				echo "<option$selected>".gettext("none")."</option>";
+
 				foreach($unpublishedpages as $page) {
 					if ($currentValue == $page["titlelink"]) {
 						$selected = " selected = 'selected'";
@@ -91,6 +94,7 @@ class ThemeOptions {
 					}
 					echo "<option$selected>".$page["titlelink"]."</option>";
 				}
+
 				echo "</select>\n";
 			}
 		}

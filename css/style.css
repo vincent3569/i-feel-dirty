@@ -6,7 +6,7 @@ Author: Studio ST
 Author URI: http://studio.st/
 Adapted on ZenPhoto by: Vincent3569
 URI: http://www.vincentbourganel.fr
-Version 1.4.3
+Version 1.4.4
 */
 
 /* --------- clear -----------*/
@@ -281,7 +281,7 @@ img {
 	text-align: center;
 }
  
-/* contact, register, tags, rating and archives */
+/* contact, register, tags, favorites, rating and archives */
 .contact {
 	background: #e2ebed url(../images/commentformbg.jpg) no-repeat;
 	width: 444px;
@@ -307,7 +307,7 @@ form#mailform input[type=text]{
 	width: 200px;
 }
 form#mailform textarea {
-	width: 250px;
+	width: 310px;
 	height: 150px;
 }
 table.register_user {
@@ -346,6 +346,9 @@ table.register_user td {
 	background-color: #294a59;
 	color: #fff;
 	border: 0;
+}
+.favorites {
+	margin: 10px 0 10px 20px;
 }
 .rating {
 	margin: 10px 0 10px 20px;
@@ -417,7 +420,7 @@ input:hover, input:focus {
 }
 input.button, input[type=button], input[type=submit], input[type=reset] {
 	background: #ddd!important;
-	width: 100px;
+	width: 120px;
 	border:1px solid #ccc!important;
 	cursor: pointer!important;
 	border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px;
@@ -627,7 +630,7 @@ ul.pagelist li.next {
 }
 #commentform {
 	background: #e2ebed url(../images/commentformbg.jpg) no-repeat;
-	width: 400px;
+	width: 444px;
 	padding: 30px 0 10px 20px;
 	margin-bottom: 10px;
 }
@@ -643,8 +646,14 @@ ul.pagelist li.next {
 	width: 200px;
 }
 #commentform textarea {
-	width: 350px;
+	width: 410px;
 	height: 150px;
+}
+#comment_tbl {
+	width: 425px!important;
+}
+#comment_tbl  td {
+	padding: 0!important;
 }
 
 /*------------------------------------------------------------------------------
