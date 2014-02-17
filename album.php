@@ -19,7 +19,7 @@
 
 			<?php if (function_exists('printSlideShowLink')) { ?>
 			<div class="img-slide clearfix">
-				<?php printSlideShowLink('Diaporama'); ?>
+				<?php printSlideShowLink(gettext('Slideshow')); ?>
 			</div>
 			<?php } ?>
 

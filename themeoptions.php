@@ -29,11 +29,18 @@ class ThemeOptions {
 		setThemeOptionDefault('show_tag_cloud', true);
 		setThemeOptionDefault('use_colorbox_image', false);
 
+		setOption('zp_plugin_print_album_menu', 129, true);
+		setOption('zp_plugin_colorbox', 129, true);
 		setOptionDefault('colorbox_i-feel-dirty_album', 1);
+		setOptionDefault('colorbox_i-feel-dirty_archive', 1);
+		setOptionDefault('colorbox_i-feel-dirty_contact', 1);
 		setOptionDefault('colorbox_i-feel-dirty_gallery', 1);
 		setOptionDefault('colorbox_i-feel-dirty_image', 1);
+		setOptionDefault('colorbox_i-feel-dirty_index', 1);
 		setOptionDefault('colorbox_i-feel-dirty_news', 1);
 		setOptionDefault('colorbox_i-feel-dirty_pages', 1);
+		setOptionDefault('colorbox_i-feel-dirty_password', 1);
+		setOptionDefault('colorbox_i-feel-dirty_register', 1);
 		setOptionDefault('colorbox_i-feel-dirty_search', 1);
 	}
 

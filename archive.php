@@ -20,7 +20,7 @@
 						<?php if (function_exists('printNewsArchive')) { ?>
 						<td id="newsarchive">
 							<h4><?php echo gettext('News archive'); ?></h4>
-							<?php printNewsArchive('archive'); ?>
+							<? printNewsArchive('archive', 'year', 'month', 'archive-active', false, 'desc'); ?>
 						</td>
 						<?php } ?>
 					</tr>

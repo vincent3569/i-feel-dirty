@@ -10,13 +10,23 @@
 				</h2>
 			</div>
 
-			<div class="contact">
-				<div class="error"><?php echo gettext('A password is required for the page you requested'); ?></div>
-
-				<?php printPasswordForm(NULL, false); ?>
-
+			<div class="post">
+				<div style='display: none;'>
+					<?php printPasswordForm('', true); ?>
 				</div>
-
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$.colorbox({
+						inline: true,
+						href: "#passwordform",
+						innerWidth: "400px",
+						close: '<?php echo gettext("close"); ?>',
+						open: true
+					});
+				});
+			</script>
+			
 		</div>	<!-- content -->
 
 	<?php include('inc_sidebar.php'); ?>

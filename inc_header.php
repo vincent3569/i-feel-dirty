@@ -60,8 +60,8 @@ setOption('personnal_thumb_image_number_col', '3', false);
 			<?php if (hasPrevImage()) { ?>var prevURL = "<? echo getPrevImageURL(); $PrevURL = true; ?>";<?php } ?>
 		<?php } else { ?>
 			<?php if ((function_exists('checkForPage')) && (is_NewsArticle())) { ?>
-				<?php if (getNextNewsURL()) { $article_url = getNextNewsURL(); ?>var nextURL = "<?php echo zp_html_decode($article_url['link']); $NextURL = true; ?>";<?php } ?>
-				<?php if (getPrevNewsURL()) { $article_url = getPrevNewsURL(); ?>var prevURL = "<?php echo zp_html_decode($article_url['link']); $PrevURL = true; ?>";<?php } ?>
+				<?php if (getNextNewsURL()) { $article_url = getNextNewsURL(); ?>var nextURL = "<?php echo html_decode($article_url['link']); $NextURL = true; ?>";<?php } ?>
+				<?php if (getPrevNewsURL()) { $article_url = getPrevNewsURL(); ?>var prevURL = "<?php echo html_decode($article_url['link']); $PrevURL = true; ?>";<?php } ?>
 			<?php } ?>
 		<?php } ?>
 

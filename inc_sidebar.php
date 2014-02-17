@@ -23,7 +23,7 @@
 			</div>
 		<?php } ?>
 
-		<?php if ((function_exists('printPageMenu')) && (getNumPages() > 0)) { ?>
+		<?php if ((function_exists('printPageMenu')) && (getNumPages(true) > 0)) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 				<h3><?php echo gettext('Pages'); ?></h3>
 				<?php printPageMenu('list', '', 'menu-active', 'submenu', 'menu-active'); ?>
@@ -88,15 +88,11 @@
 		<?php if (function_exists('printUserLogin_out')) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 				<h3><?php echo gettext('Log in'); ?></h3>
-				<?php if (zp_loggedin()) { ?>
 				<ul>
 					<li>
-				<?php } ?>
-						<?php printUserLogin_out('', ''); ?>
-				<?php if (zp_loggedin()) { ?>
+						<?php printUserLogin_out('', '', 2); ?>
 					</li>
 				</ul>
-				<?php } ?>
 
 				<?php if ((!zp_loggedin()) && (function_exists('printRegistrationForm'))) { ?>
 				<ul>

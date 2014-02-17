@@ -6,7 +6,7 @@ Author: Studio ST
 Author URI: http://studio.st/
 Adapted on ZenPhoto by: Vincent3569
 URI: http://www.vincentbourganel.fr
-Version 1.1 
+Version 1.4.2
 */
 
 /* --------- clear -----------*/
@@ -259,7 +259,7 @@ img {
 }
 .imagethumb a:hover, .imagethumb-lastcol a:hover {
 	background-color: #e2ebed;
-}#image {
+}#image {
 	text-align: center;
 	margin: 15px 0;
 }
@@ -303,12 +303,22 @@ form#mailform table {
 form#mailform table td {
 	text-align: left;
 }
+form#mailform input[type=text]{
+	width: 200px;
+}
+form#mailform textarea {
+	width: 250px;
+	height: 150px;
+}
 table.register_user {
 	padding: 10px 0 10px 10px;
 }
 table.register_user td {
 	vertical-align: top;
 	padding: 0 0 3px;
+}
+.register_user  input[type=text], .register_user  input[type=password]{
+	width: 200px;
 }
 .contact table td {
 	padding-bottom: 5px;
@@ -435,16 +445,23 @@ button[type=submit]:hover, button[type=reset]:hover {
 	cursor: pointer!important;
 	border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px;
 }
-/*.pushbutton {
-	margin: 10px 0;
-	width: auto!important;
-}*/
 #search_submit {
  width:  80px!important;
 }
 #commentform .pushbutton {
  margin: 10px 0;
  width: auto!important;
+}
+
+/* error box */
+.errorbox {
+	margin: 10px 0 0 15px;	
+	font-size: 11px;
+	font-weight: bold;
+	color: #9b0e0e;
+}
+.errorbox h2 {
+	font-size: 12px;
 }
 
 /*------------------------------------------------------------------------------
@@ -622,6 +639,13 @@ ul.pagelist li.next {
 	color: #294a59;
 	padding: 2px 10px 2px;
 }
+#commentform .inputbox, #commentform .disabled_input {
+	width: 200px;
+}
+#commentform textarea {
+	width: 350px;
+	height: 150px;
+}
 
 /*------------------------------------------------------------------------------
 									sidebar
@@ -684,10 +708,10 @@ ul.pagelist li.next {
 .bloque1 ul a {
 	border-bottom: 1px dashed #968e77;
 }
-.bloque1 p a, .bloque2 p a {
+.bloque1 a, .bloque2 a {
 	color: #000;
 }
-.bloque1 ul a:hover, .bloque1 p a:hover {
+.bloque1 ul a:hover, .bloque1 a:hover  {
 	background-color: #6c644d;
 	color: #fff;
 	border: 0;
@@ -695,11 +719,12 @@ ul.pagelist li.next {
 .bloque2 ul a {
 	border-bottom: 1px dashed #668b9c;
 }
-.bloque2 ul a:hover, .bloque2 p a:hover {
+.bloque2 ul a:hover, .bloque2 a:hover {
 	background-color: #294a59;
 	color: #fff;
 	border: 0;
 }
+/* search */
 #search {
 	padding-left: 8px;
 }
@@ -729,24 +754,50 @@ ul.pagelist li.next {
 	padding: 0;
 }
 
-.passwordform {
+/* password */
+#passwordform {
+	background: #E2EBED;
+	margin: 0 auto;
+	padding: 15px 0 25px;
+	width: 400px;
+	text-align: left;
+}
+#passwordform p{
+	text-align: center;
+	margin-bottom: 15px;
 }
 #logon_box {
-	border:0 solid;
+	width: 300px;
+	margin: 0 auto 10px;
 }
-#logon_box legend {
-	visibility: hidden;
+#loginform fieldset {
+	border: 1px solid #bbb;
+	padding: 10px;
+	line-height: 20px;
+	margin-bottom: 5px;
+	border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; -webkit-border-radius: 5px;
 }
-.password {
+#loginform legend {
+	color: #333;
+}
+#loginform input.textfield {
+	font-size: 100%;
+	margin: 0;
+	padding: 4px;
+	width: 180px;
+}
+div.buttons {
 	margin-left: 10px;
 }
-.password td {
-	padding-bottom: 5px;
+.logon_link {
+	margin: 20px 0 0!important;
 }
-.password h2 {
-	font-size: 100%;
-	font-weight: normal;
+.logon_link a {
+	color: #9b0e0e;
+	text-decoration: none;
 }
+
+/* tag cloud */
 .tags-cloud {
 	text-align: center;
 	padding: 0 20px 15px 10px;
@@ -760,6 +811,7 @@ ul.pagelist li.next {
 .tags-cloud ul li a {
 	border-bottom: none;
 }
+/* random pict */
 .random-pict {
 	text-align: center;
 }
@@ -850,15 +902,4 @@ ul.pagelist li.next {
 #admin a:hover, #admin_data a:hover {
 	background-color: #6c644d;
 	color: #fff;
-}
-
-/* error box */
-.errorbox {
-	margin: 10px 0 0 15px;	
-	font-size: 11px;
-	font-weight: bold;
-	color: #9b0e0e;
-}
-.errorbox h2 {
-	font-size: 12px;
 }

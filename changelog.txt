@@ -1,15 +1,40 @@
+* 1.4.2
+- css/screen.css :
+	- graphical improvements
+- js/i-feel-dirty.js :
+	- fix an issue : force to open comment box if there is an error
+- 404.php :
+	-fix High-Tech Bridge security isue (http://www.zenphoto.org/trac/changeset/8994)
+- album.php :
+	- fix translation issue of Slideshow link
+- image.php :
+	- fix translation issue of Slideshow link
+- inc_header.php :
+	- archive.php :
+	- use improvements of zenphoto 1.4.2 on printNewsArchive (http://www.zenphoto.org/trac/ticket/1972)
+- inc_header.php :
+	- call of new html_decode() function instead of zp_html_decode()
+- inc_sidebar.php :
+	- use improvements of zenphoto 1.4.2 on printUserLogin_out (http://www.zenphoto.org/trac/ticket/2054)
+- password :
+	- improvements of management of the password form (password form is displayed in colorbox)
+- search.php :
+	- fix translation issue of Slideshow link
+
+
 * 1.1
 - css/style.css
 	- fix issue with flag selector
-- index.php :
-	- fix an issue : the title of the page was incorrect in some case
-- footer.php :
-	- remove some code
-- header.php :
-	- fix an issue : the title of the page was incorrect in some case
-	- fix an issue with rrs-news
 - footer.php, header.php, print_album_thumb.php, print_comment.php, print_image_thumb.php, print_news_loop.php, sidebar.php :
 	- prefix of filename with inc_ for more lisibility of the code
+- index.php :
+	- fix an issue : the title of the page was incorrect in some case
+- inc_footer.php :
+	- remove some code
+- inc_header.php :
+	- fix an issue : the title of the page was incorrect in some case
+	- fix an issue with rrs-news
+
 
 * 1.0
 initial version
