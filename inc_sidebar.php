@@ -112,10 +112,10 @@
 				</ul>
 				<?php }	?>
 
-				<?php if ((zp_loggedin()) && (function_exists('printFavoritesLink'))) { ?>
+				<?php if ((zp_loggedin()) && (function_exists('printFavoritesURL'))) { ?>
 				<ul>
 					<li>
-						<?php printFavoritesLink(); ?>
+						<?php printFavoritesURL(); ?>
 					</li>
 				</ul>
 				<?php }	?>

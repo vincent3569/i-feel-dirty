@@ -1,5 +1,5 @@
 * 1.4.5.1
-- inc_sidebar.php :
+- inc_header.php :
 	- fix issue introduced by Zenphoto 1.4.5.8
 
 

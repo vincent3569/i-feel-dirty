@@ -8,7 +8,7 @@ include ('inc_header.php');
 			<div id="breadcrumb">
 				<h2>
 					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
 					<?php printNewsIndexURL(gettext('News'), ' » '); ?><?php printCurrentNewsCategory(' » ' . gettext('Category') . ' : '); ?><?php printCurrentNewsArchive(' » '); ?>
 				</h2>
 			</div>
@@ -56,7 +56,7 @@ include ('inc_header.php');
 
 			<?php
 			} else {
-				
+
 				// news article loop
 				include('inc_print_news_loop.php');
 			}
