@@ -13,13 +13,32 @@
 
 		<div class="footer2">
 			<?php
-			if (function_exists('printFavoritesLink')) {
-				printFavoritesLink(); echo ' | ';
+			if (function_exists('printFavoritesURL')) {
+				printFavoritesURL();
 			}
-			printCustomPageURL(gettext('Archive View'), 'archive', '', '');
-			if (function_exists('printContactForm')) {
-				printCustomPageURL(gettext('Contact'), 'contact', '', ' | ');
+
+			if ( getOption('show_archive') && !function_exists('printFavoritesURL') ) {
+				printCustomPageURL(gettext('Archive View'), 'archive', '', '', '');
+			} else {
+				if ( getOption('show_archive') && function_exists('printFavoritesURL') ) {
+					printCustomPageURL(gettext('Archive View'), 'archive', '', ' | ', '');
+				}
 			}
+
+			if ( zp_loggedin() ) {
+				if ( function_exists('printContactForm') && getOption('show_contact') ) {
+					printCustomPageURL(gettext('Contact'), 'contact', '', ' | ', '');
+				}
+			} else {
+				if ( function_exists('printContactForm') && getOption('show_contact') && getOption('show_archive') ) {
+					printCustomPageURL(gettext('Contact'), 'contact', '', ' | ', '');
+				} else {
+					if ( function_exists('printContactForm') && getOption('show_contact') && !getOption('show_archive') ) {
+						printCustomPageURL(gettext('Contact'), 'contact', '', '', '');
+					}
+				}
+			}
+
 			?>
 		</div>
 	</div>	<!-- footer -->

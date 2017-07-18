@@ -8,7 +8,7 @@ include ('inc_header.php');
 			<div id="breadcrumb">
 				<h2>
 					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
 				</h2>
 			</div>
 

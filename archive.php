@@ -5,7 +5,7 @@
 			<div id="breadcrumb">
 				<h2>
 					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
+					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
 					<?php echo gettext('Archive View'); ?>
 				</h2>
 			</div>

@@ -5,7 +5,7 @@
 				<?php while (next_news()) { ?>
 				<div class="post clearfix">
 					<div class="posttitle">
-						<h3><?php printNewsTitleLink(); ?></h3>
+						<h3><?php printNewsURL(); ?></h3>
 					</div>
 
 					<div class="postmetadata">

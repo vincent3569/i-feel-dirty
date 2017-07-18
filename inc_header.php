@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // force UTF-8 Ø
 
@@ -45,7 +45,7 @@ setOption('personnal_thumb_image_number_col', '3', false);
 			printRSSHeaderLink('Gallery', gettext('Latest images RSS'));
 		}
 		if (getOption('RSS_articles')) {
-			printRSSHeaderLink('NewsWithImages', gettext('News and Gallery RSS'));
+			printRSSHeaderLink('News', gettext('News and Gallery RSS'));
 		}
 	}
 	?>
@@ -165,8 +165,8 @@ setOption('personnal_thumb_image_number_col', '3', false);
 				<?php } ?>
 				<?php if (getOption('RSS_articles')) { ?>
 				<div class="rsslink">
-					<?php printRSSLink('NewsWithImages', '', '', '', false, 'rssimg'); $rss_feed = true; ?>
-					<?php printRSSLink('NewsWithImages', '', gettext('News and Gallery'), '', false, 'rsstext'); ?>
+					<?php printRSSLink('News', '', '', '', false, 'rssimg'); $rss_feed = true; ?>
+					<?php printRSSLink('News', '', gettext('News'), '', false, 'rsstext'); ?>
 				</div>
 				<?php } ?>
 				<?php if ($rss_feed) { ?>

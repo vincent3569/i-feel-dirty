@@ -5,7 +5,7 @@
 			<div id="breadcrumb">
 				<h2>
 					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
 					<?php if ((class_exists('Zenpage')) && ((gettext(getOption('ifeeldirty_homepage')) <> gettext('none')) || (getOption('ifeeldirty_news_on_homepage')))) { ?>
 						&raquo;&nbsp;<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
 					<?php } ?>

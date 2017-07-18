@@ -6,7 +6,7 @@
 					while (next_image()) { ?>
 						<div class="image">
 							<div class="imagethumb<?php if ($col == getOption('images_per_row')) { echo '-lastcol'; $col = 0; } ?>">
-								<a class="thumb" href="<?php echo html_encode(getImageLinkURL()); ?>" title="<?php echo getAnnotatedImageTitle(); ?>"><?php printImageThumb(getAnnotatedImageTitle(), 'image'); ?></a>
+								<a class="thumb" href="<?php echo html_encode(getImageURL()); ?>" title="<?php echo getAnnotatedImageTitle(); ?>"><?php printImageThumb(getAnnotatedImageTitle(), 'image'); ?></a>
 							</div>
 						</div>
 						<?php

@@ -5,7 +5,7 @@
 			<div id="breadcrumb">
 				<h2>
 					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
 					&raquo;&nbsp;<?php echo '<em>'.gettext('Recherche').'</em>'; ?>
 				</h2>
 			</div>
@@ -85,13 +85,13 @@
 						<ul class="search-item"><li><?php printf(gettext('Articles (%s)'), $numnews); ?></li></ul>
 						<?php while (next_news('date', 'desc')) { ?>
 							<div class="search-news clearfix">
-								<h3 class="search-title"><?php printNewsTitleLink(); ?></h3>
+								<h3 class="search-title"><?php printNewsURL(); ?></h3>
 								<div class="search-content clearfix">
 									<?php echo shortenContent(strip_tags(getNewsContent()), 100, getOption('zenpage_textshorten_indicator')); ?>
 								</div>
 							</div>
 						<?php } ?>
-						
+
 					</div>
 				<?php
 				}

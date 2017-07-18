@@ -1,5 +1,8 @@
+* 1.4.7
+	- fix general coding incompatibilities with Zenphoto 1.4.7
+
 * 1.4.5.1
-- inc_sidebar.php :
+- inc_header.php :
 	- fix issue introduced by Zenphoto 1.4.5.8
 
 
