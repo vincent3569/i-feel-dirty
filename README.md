@@ -9,6 +9,7 @@ Feel free to download and use it, and thanks in advance for your feedback!
 If you use an older release of ZenPhoto, see [Old releases of i-feel-dirty on Github](https://github.com/vincent3569/i-feel-dirty/releases).
 
 Report issues on the [ZenPhoto forum](http://www.zenphoto.org/support/) or create a new issue on [GitHub](https://github.com/vincent3569/i-feel-dirty/issues) and I will fix it as soon as possible (only the latest version is supported).
+
 Please note that the ZenPhoto team advise to regulary upgrade its site with the latest version of ZenPhoto to benefit from the latest features of the application, to solve the various security holes, and to benefit from the support of the ZenPhoto team.
 
 ### ChangeLog
