@@ -2,408 +2,287 @@ msgid ""
 msgstr ""
 "Project-Id-Version: i-feel-dirty\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 19:37+0100\n"
-"PO-Revision-Date: 2015-02-17 20:07+0100\n"
-"Last-Translator: fretzl\n"
+"POT-Creation-Date: 2017-07-31 22:38+0200\n"
+"PO-Revision-Date: 2017-07-31 22:38+0200\n"
+"Last-Translator: Vincent Bourganel <vincent_bourganel@yahoo.fr>\n"
 "Language-Team: vincent3569 <vincent_bourganel@yahoo.fr>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: gettext_th\n"
-"X-Poedit-Basepath: /Applications/MAMP/htdocs/ZpUnsupported\n"
+"X-Poedit-KeywordsList: ;gettext_th\n"
+"X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 2.0.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: themes/i-feel-dirty\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: themes/i-feel-dirty/404.php:8 themes/i-feel-dirty/album.php:8
-#: themes/i-feel-dirty/archive.php:8 themes/i-feel-dirty/contact.php:11
-#: themes/i-feel-dirty/favorites.php:8 themes/i-feel-dirty/gallery.php:8
-#: themes/i-feel-dirty/image.php:21 themes/i-feel-dirty/news.php:11
-#: themes/i-feel-dirty/pages.php:11 themes/i-feel-dirty/password.php:8
-#: themes/i-feel-dirty/register.php:11 themes/i-feel-dirty/search.php:8
-msgid "Main Index"
-msgstr "Index"
-
-#: themes/i-feel-dirty/404.php:8 themes/i-feel-dirty/album.php:8
-#: themes/i-feel-dirty/archive.php:8 themes/i-feel-dirty/contact.php:11
-#: themes/i-feel-dirty/favorites.php:8 themes/i-feel-dirty/gallery.php:8
-#: themes/i-feel-dirty/image.php:21 themes/i-feel-dirty/inc_header.php:24
-#: themes/i-feel-dirty/news.php:11 themes/i-feel-dirty/pages.php:11
-#: themes/i-feel-dirty/password.php:8 themes/i-feel-dirty/register.php:11
-#: themes/i-feel-dirty/search.php:8
-msgid "Home"
-msgstr "Home"
-
-#: themes/i-feel-dirty/404.php:9 themes/i-feel-dirty/inc_header.php:26
-msgid "Object not found"
-msgstr "Object niet gevonden"
-
-#: themes/i-feel-dirty/404.php:15
-msgid "The Zenphoto object you are requesting cannot be found."
-msgstr "Het Zenphoto object dat je zoekt kan niet gevonden worden."
-
-#: themes/i-feel-dirty/404.php:17
-#, php-format
-msgid "Album: %s"
-msgstr "Album: %s"
-
-#: themes/i-feel-dirty/404.php:20
-#, php-format
-msgid "Image: %s"
-msgstr "Afbeelding: %s"
-
-#: themes/i-feel-dirty/404.php:23
-#, php-format
-msgid "Page: %s"
-msgstr "Pagina: %s"
-
-#: themes/i-feel-dirty/album.php:9 themes/i-feel-dirty/favorites.php:9
-#: themes/i-feel-dirty/gallery.php:9 themes/i-feel-dirty/image.php:22
-#: themes/i-feel-dirty/themeoptions.php:84
-#: themes/i-feel-dirty/themeoptions.php:86
-msgid "none"
-msgstr "geen"
-
-#: themes/i-feel-dirty/album.php:16 themes/i-feel-dirty/album.php:32
-#: themes/i-feel-dirty/favorites.php:18 themes/i-feel-dirty/favorites.php:36
-#: themes/i-feel-dirty/gallery.php:17
-#: themes/i-feel-dirty/inc_print_news_loop.php:3
-#: themes/i-feel-dirty/inc_print_news_loop.php:21
-#: themes/i-feel-dirty/search.php:63
-msgid "« prev"
-msgstr "« vorige"
-
-#: themes/i-feel-dirty/album.php:16 themes/i-feel-dirty/album.php:32
-#: themes/i-feel-dirty/favorites.php:18 themes/i-feel-dirty/favorites.php:36
-#: themes/i-feel-dirty/gallery.php:17
-#: themes/i-feel-dirty/inc_print_news_loop.php:3
-#: themes/i-feel-dirty/inc_print_news_loop.php:21
-#: themes/i-feel-dirty/search.php:63
-msgid "next »"
-msgstr "volgende »"
-
-#: themes/i-feel-dirty/album.php:20 themes/i-feel-dirty/favorites.php:25
-#: themes/i-feel-dirty/image.php:31 themes/i-feel-dirty/search.php:67
-msgid "Slideshow"
-msgstr "Slideshow"
-
-#: themes/i-feel-dirty/archive.php:9 themes/i-feel-dirty/inc_footer.php:21
-#: themes/i-feel-dirty/inc_footer.php:24 themes/i-feel-dirty/inc_header.php:28
-#: themes/i-feel-dirty/inc_sidebar.php:58
-msgid "Archive View"
-msgstr "Archief"
-
-#: themes/i-feel-dirty/archive.php:17
-msgid "Gallery Archive"
-msgstr "Galerij archief"
-
-#: themes/i-feel-dirty/archive.php:22
-msgid "News archive"
-msgstr "Nieuws archief"
-
-#: themes/i-feel-dirty/contact.php:12 themes/i-feel-dirty/inc_footer.php:30
-#: themes/i-feel-dirty/inc_footer.php:34 themes/i-feel-dirty/inc_footer.php:37
-#: themes/i-feel-dirty/inc_header.php:29
-#: themes/i-feel-dirty/inc_sidebar.php:81
-#: themes/i-feel-dirty/inc_sidebar.php:87
-msgid "Contact"
-msgstr "Contact"
-
-#: themes/i-feel-dirty/favorites.php:10
-msgid "Albums Index"
-msgstr "Albumindex"
-
-#: themes/i-feel-dirty/image.php:8
-msgid "Previous Image"
-msgstr "Vorige afbeelding"
-
-#: themes/i-feel-dirty/image.php:13
-msgid "Next Image"
-msgstr "Volgende afbeelding"
-
-#: themes/i-feel-dirty/image.php:49
-msgid "Image Info"
-msgstr "Foto-informatie"
-
-#: themes/i-feel-dirty/inc_footer.php:7
+#: inc_footer.php:7
 msgid "You can browse with the arrows keys of your keyboard"
 msgstr "Je kunt de pijltjestoetsen gebruiken om te navigeren"
 
-#: themes/i-feel-dirty/inc_header.php:25 themes/i-feel-dirty/inc_header.php:31
-#: themes/i-feel-dirty/inc_header.php:163
-#: themes/i-feel-dirty/inc_sidebar.php:13
-#: themes/i-feel-dirty/inc_sidebar.php:65
-#: themes/i-feel-dirty/inc_sidebar.php:71
-msgid "Gallery"
-msgstr "Galerij"
-
-#: themes/i-feel-dirty/inc_header.php:30
-msgid "My favorites"
-msgstr "Mijn favorieten"
-
-#: themes/i-feel-dirty/inc_header.php:33
-#: themes/i-feel-dirty/inc_header.php:169 themes/i-feel-dirty/news.php:12
-msgid "News"
-msgstr "Nieuws"
-
-#: themes/i-feel-dirty/inc_header.php:36
-msgid "Password Required..."
-msgstr "Wachtwoord vereist..."
-
-#: themes/i-feel-dirty/inc_header.php:37
-msgid "Register"
-msgstr "Registreren"
-
-#: themes/i-feel-dirty/inc_header.php:38 themes/i-feel-dirty/inc_sidebar.php:6
-#: themes/i-feel-dirty/inc_sidebar.php:7
-msgid "Search"
-msgstr "Zoeken"
-
-#: themes/i-feel-dirty/inc_header.php:45
-msgid "Latest images RSS"
-msgstr "RSS Laatste afbeeldingen"
-
-#: themes/i-feel-dirty/inc_header.php:48
-msgid "News and Gallery RSS"
-msgstr "RSS Nieuws"
-
-#: themes/i-feel-dirty/inc_header.php:115
-msgid "start slideshow"
-msgstr "start slideshow"
-
-#: themes/i-feel-dirty/inc_header.php:116
-msgid "stop slideshow"
-msgstr "stop slideshow"
-
-#: themes/i-feel-dirty/inc_header.php:117
-msgid "prev"
-msgstr "vorige"
-
-#: themes/i-feel-dirty/inc_header.php:118
-msgid "next"
-msgstr "volgende"
-
-#: themes/i-feel-dirty/inc_header.php:119
-#: themes/i-feel-dirty/inc_header.php:137 themes/i-feel-dirty/password.php:24
-msgid "close"
-msgstr "sluiten"
-
-#: themes/i-feel-dirty/inc_print_album_thumb.php:9
-#: themes/i-feel-dirty/inc_print_album_thumb.php:12
-msgid "View album:"
-msgstr "Bekijk album:"
-
-#: themes/i-feel-dirty/inc_print_comment.php:30
-msgid "No Comments"
-msgstr "Geen reacties"
-
-#: themes/i-feel-dirty/inc_print_comment.php:32
-#, php-format
-msgid "%u Comment"
-msgid_plural "%u Comments"
-msgstr[0] "%u Reactie"
-msgstr[1] "%u Reacties"
-
-#: themes/i-feel-dirty/inc_print_news_loop.php:12
-#: themes/i-feel-dirty/news.php:33
-msgid " | "
-msgstr "|"
-
-#: themes/i-feel-dirty/inc_sidebar.php:15
-msgid "Album index"
-msgstr "Albumindex"
-
-#: themes/i-feel-dirty/inc_sidebar.php:23
-msgid "News articles"
-msgstr "Nieuwsartikelen"
-
-#: themes/i-feel-dirty/inc_sidebar.php:24
-msgid "All news"
-msgstr "Alle nieuws"
-
-#: themes/i-feel-dirty/inc_sidebar.php:30
-msgid "Pages"
-msgstr "Pagina’s"
-
-#: themes/i-feel-dirty/inc_sidebar.php:37
-msgid "Random picture..."
-msgstr "Willekeurige foto..."
-
-#: themes/i-feel-dirty/inc_sidebar.php:48
-msgid "Tags"
-msgstr "Tags"
-
-#: themes/i-feel-dirty/inc_sidebar.php:63
-msgid "Gallery And News"
-msgstr "Galerij en Nieuws"
-
-#: themes/i-feel-dirty/inc_sidebar.php:69
-msgid "Gallery and News"
-msgstr "Galerij en Nieuws"
-
-#: themes/i-feel-dirty/inc_sidebar.php:85
-msgid "Contact us"
-msgstr "Contact"
-
-#: themes/i-feel-dirty/inc_sidebar.php:96
-msgid "user"
-msgstr "gebruiker"
-
-#: themes/i-feel-dirty/inc_sidebar.php:106
-#: themes/i-feel-dirty/inc_sidebar.php:108
-msgid "Register for this site"
-msgstr "Registreer je voor deze site."
-
-#: themes/i-feel-dirty/news.php:12
-msgid "Category"
-msgstr "Categorie"
-
-#: themes/i-feel-dirty/password.php:9
-msgid "Password required"
-msgstr "Wachtwoord vereist"
-
-#: themes/i-feel-dirty/register.php:12
-msgid "User Registration"
-msgstr "Gebruikers registratiepagina"
-
-#: themes/i-feel-dirty/search.php:9
-msgid "Recherche"
-msgstr "Zoeken"
-
-#: themes/i-feel-dirty/search.php:38
-#, php-format
-msgid "%1$u Hit for <em>%2$s</em>"
-msgid_plural "%1$u Hits for <em>%2$s</em>"
-msgstr[0] "%1$u hit voor <em>%2$s</em>"
-msgstr[1] "%1$u hits for <em>%2$s</em>"
-
-#: themes/i-feel-dirty/search.php:40
-msgid "Sorry, no matches found. Try refining your search."
-msgstr "Sorry, geen resultaten. Probeer de zoekopdracht te herformuleren."
-
-#: themes/i-feel-dirty/search.php:48
-#, php-format
-msgid "Images (%s)"
-msgstr "Afbeeldingen (%s)"
-
-#: themes/i-feel-dirty/search.php:53
-#, php-format
-msgid "Albums (%s)"
-msgstr "Albums (%s)"
-
-#: themes/i-feel-dirty/search.php:57
-#, php-format
-msgid "Albums (%1$s) &amp; Images (%2$s)"
-msgstr "Albums (%1$s) &amp; Afbeeldingen (%2$s)"
-
-#: themes/i-feel-dirty/search.php:85
-#, php-format
-msgid "Articles (%s)"
-msgstr "Artikelen (%s)"
-
-#: themes/i-feel-dirty/search.php:101
-#, php-format
-msgid "Pages (%s)"
-msgstr "Pagina’s (%s)"
-
-#: themes/i-feel-dirty/themeoptions.php:58
-msgid "Homepage"
-msgstr "Homepage"
-
-#: themes/i-feel-dirty/themeoptions.php:58
-msgid ""
-"Choose here any <em>un-published Zenpage page</em> (listed by <em>titlelink</"
-"em>) to act as your site's homepage instead the normal gallery index."
-msgstr ""
-"Kies hier een <em>ongepubliceerde Zenpage pagina</em> om te fungeren als de "
-"site's homepage i.p.v. de normale galerij index. "
-
-#: themes/i-feel-dirty/themeoptions.php:58
-msgid ""
-"<strong>Note:</strong> This of course overrides the <em>News on index page</"
-"em> option and your theme must be setup for this feature! Visit the theming "
-"tutorial for details."
-msgstr ""
-"<strong>Opmerking:</strong> Dit maakt dat de <em> Nieuws op index pagina</"
-"em> niet werkt. Bovendien moet het thema aangepast worden voor deze "
-"mogelijkheid. Zie de thema uitleg voor meer informatie."
-
-#: themes/i-feel-dirty/themeoptions.php:59
-msgid "News on index page"
-msgstr "Nieuws op index  pagina"
-
-#: themes/i-feel-dirty/themeoptions.php:59
-msgid ""
-"Enable this if you want to show the news section's first page on the "
-"<code>index.php</code> page."
-msgstr "Vink aan om de nieuwspagina te laten zien op <code>index.php</code>."
-
-#: themes/i-feel-dirty/themeoptions.php:60
-msgid "Allow search"
-msgstr "Sta zoeken toe"
-
-#: themes/i-feel-dirty/themeoptions.php:60
-msgid "Check to enable search form."
-msgstr "Vink aan om het zoekveld te tonen."
-
-#: themes/i-feel-dirty/themeoptions.php:61
-msgid "Show Archive"
-msgstr "Toon archief"
-
-#: themes/i-feel-dirty/themeoptions.php:61
+#: themeoptions.php:61
 msgid "Display a menu link to the Archive list."
 msgstr "Toon een link naar de <code>archief</code> pagina."
 
-#: themes/i-feel-dirty/themeoptions.php:62
-msgid "Show Contact"
-msgstr "Toon contact"
-
-#: themes/i-feel-dirty/themeoptions.php:62
+#: themeoptions.php:62
 msgid "Display a menu link to the Contact box."
 msgstr "Toon een link naar de <code>contact</code> pagina."
 
-#: themes/i-feel-dirty/themeoptions.php:63
-msgid "Show image EXIF data"
-msgstr "Toon EXIF informatie"
-
-#: themes/i-feel-dirty/themeoptions.php:63
+#: themeoptions.php:63
 msgid ""
 "Show the EXIF Data on Image page. Remember you have to check EXIFs data you "
 "want to show on admin>image>information EXIF."
 msgstr ""
 "Toon de EXIF informatie uit afbeeldingen op de afbeeldingspagina. Vergeet "
 "niet de gewenste EXIF informatie te selecteren op Admin -> Opties -> "
-"Afbeelding ->Metadata"
+"Afbeelding ->Metadata."
 
-#: themes/i-feel-dirty/themeoptions.php:64
-msgid "Show Random Picture"
-msgstr "Toon willekeurige afbeelding"
-
-#: themes/i-feel-dirty/themeoptions.php:64
+#: themeoptions.php:64
 msgid "Display a random picture of the gallery."
 msgstr "Toon een willekeurige afbeelding uit de galerij."
 
-#: themes/i-feel-dirty/themeoptions.php:65
-msgid "Show Tags"
-msgstr "Toon tags"
-
-#: themes/i-feel-dirty/themeoptions.php:65
+#: themeoptions.php:65
 msgid "Check to show a tag cloud with all the tags of the gallery."
 msgstr ""
 "Vink aan om een <em>tag cloud</em> te tonen met alle tags in de galerij."
 
-#: themes/i-feel-dirty/themeoptions.php:66
-msgid "Use Colorbox in Image page"
-msgstr "Gebruik Colorbox"
-
-#: themes/i-feel-dirty/themeoptions.php:66
+#: themeoptions.php:66
 msgid "Check to display the full size image with Colorbox in Image page."
 msgstr ""
 "Vink aan om de orginele (grote) afbeelding te tonen in Colorbox op de "
 "afbeeldingspagina."
 
-#: themes/i-feel-dirty/themeoptions.php:74
-msgid "No unpublished pages available"
-msgstr "Er zijn geen ongepubliceerde pagina’s"
+#~ msgid "Main Index"
+#~ msgstr "Index"
+
+#~ msgid "Home"
+#~ msgstr "Home"
+
+#~ msgid "Object not found"
+#~ msgstr "Object niet gevonden"
+
+#~ msgid "The Zenphoto object you are requesting cannot be found."
+#~ msgstr "Het Zenphoto object dat je zoekt kan niet gevonden worden."
+
+#~ msgid "Album: %s"
+#~ msgstr "Album: %s"
+
+#~ msgid "Image: %s"
+#~ msgstr "Afbeelding: %s"
+
+#~ msgid "Page: %s"
+#~ msgstr "Pagina: %s"
+
+#~ msgid "none"
+#~ msgstr "geen"
+
+#~ msgid "« prev"
+#~ msgstr "« vorige"
+
+#~ msgid "next »"
+#~ msgstr "volgende »"
+
+#~ msgid "Slideshow"
+#~ msgstr "Slideshow"
+
+#~ msgid "Archive View"
+#~ msgstr "Archief"
+
+#~ msgid "Gallery Archive"
+#~ msgstr "Galerij archief"
+
+#~ msgid "News archive"
+#~ msgstr "Nieuws archief"
+
+#~ msgid "Contact"
+#~ msgstr "Contact"
+
+#~ msgid "Albums Index"
+#~ msgstr "Albumindex"
+
+#~ msgid "Previous Image"
+#~ msgstr "Vorige afbeelding"
+
+#~ msgid "Next Image"
+#~ msgstr "Volgende afbeelding"
+
+#~ msgid "Image Info"
+#~ msgstr "Foto-informatie"
+
+#~ msgid "Gallery"
+#~ msgstr "Galerij"
+
+#~ msgid "My favorites"
+#~ msgstr "Mijn favorieten"
+
+#~ msgid "News"
+#~ msgstr "Nieuws"
+
+#~ msgid "Password Required..."
+#~ msgstr "Wachtwoord vereist..."
+
+#~ msgid "Register"
+#~ msgstr "Registreren"
+
+#~ msgid "Search"
+#~ msgstr "Zoeken"
+
+#~ msgid "Latest images RSS"
+#~ msgstr "RSS Laatste afbeeldingen"
+
+#~ msgid "News and Gallery RSS"
+#~ msgstr "RSS Nieuws"
+
+#~ msgid "start slideshow"
+#~ msgstr "start slideshow"
+
+#~ msgid "stop slideshow"
+#~ msgstr "stop slideshow"
+
+#~ msgid "prev"
+#~ msgstr "vorige"
+
+#~ msgid "next"
+#~ msgstr "volgende"
+
+#~ msgid "close"
+#~ msgstr "sluiten"
+
+#~ msgid "View album:"
+#~ msgstr "Bekijk album:"
+
+#~ msgid "No Comments"
+#~ msgstr "Geen reacties"
+
+#~ msgid "%u Comment"
+#~ msgid_plural "%u Comments"
+#~ msgstr[0] "%u Reactie"
+#~ msgstr[1] "%u Reacties"
+
+#~ msgid " | "
+#~ msgstr "|"
+
+#~ msgid "Album index"
+#~ msgstr "Albumindex"
+
+#~ msgid "News articles"
+#~ msgstr "Nieuwsartikelen"
+
+#~ msgid "All news"
+#~ msgstr "Alle nieuws"
+
+#~ msgid "Pages"
+#~ msgstr "Pagina’s"
+
+#~ msgid "Random picture..."
+#~ msgstr "Willekeurige foto..."
+
+#~ msgid "Tags"
+#~ msgstr "Tags"
+
+#~ msgid "Gallery And News"
+#~ msgstr "Galerij en Nieuws"
+
+#~ msgid "Gallery and News"
+#~ msgstr "Galerij en Nieuws"
+
+#~ msgid "Contact us"
+#~ msgstr "Contact"
+
+#~ msgid "user"
+#~ msgstr "gebruiker"
+
+#~ msgid "Register for this site"
+#~ msgstr "Registreer je voor deze site."
+
+#~ msgid "Category"
+#~ msgstr "Categorie"
+
+#~ msgid "Password required"
+#~ msgstr "Wachtwoord vereist"
+
+#~ msgid "User Registration"
+#~ msgstr "Gebruikers registratiepagina"
+
+#~ msgid "Recherche"
+#~ msgstr "Zoeken"
+
+#~ msgid "%1$u Hit for <em>%2$s</em>"
+#~ msgid_plural "%1$u Hits for <em>%2$s</em>"
+#~ msgstr[0] "%1$u hit voor <em>%2$s</em>"
+#~ msgstr[1] "%1$u hits for <em>%2$s</em>"
+
+#~ msgid "Sorry, no matches found. Try refining your search."
+#~ msgstr "Sorry, geen resultaten. Probeer de zoekopdracht te herformuleren."
+
+#~ msgid "Images (%s)"
+#~ msgstr "Afbeeldingen (%s)"
+
+#~ msgid "Albums (%s)"
+#~ msgstr "Albums (%s)"
+
+#~ msgid "Albums (%1$s) &amp; Images (%2$s)"
+#~ msgstr "Albums (%1$s) &amp; Afbeeldingen (%2$s)"
+
+#~ msgid "Articles (%s)"
+#~ msgstr "Artikelen (%s)"
+
+#~ msgid "Pages (%s)"
+#~ msgstr "Pagina’s (%s)"
+
+#~ msgid "Homepage"
+#~ msgstr "Homepage"
+
+#~ msgid ""
+#~ "Choose here any <em>un-published Zenpage page</em> (listed by "
+#~ "<em>titlelink</em>) to act as your site's homepage instead the normal "
+#~ "gallery index."
+#~ msgstr ""
+#~ "Kies hier een <em>ongepubliceerde Zenpage pagina</em> om te fungeren als "
+#~ "de site's homepage i.p.v. de normale galerij index. "
+
+#~ msgid ""
+#~ "<strong>Note:</strong> This of course overrides the <em>News on index "
+#~ "page</em> option and your theme must be setup for this feature! Visit the "
+#~ "theming tutorial for details."
+#~ msgstr ""
+#~ "<strong>Opmerking:</strong> Dit maakt dat de <em> Nieuws op index pagina</"
+#~ "em> niet werkt. Bovendien moet het thema aangepast worden voor deze "
+#~ "mogelijkheid. Zie de thema uitleg voor meer informatie."
+
+#~ msgid "News on index page"
+#~ msgstr "Nieuws op index  pagina"
+
+#~ msgid ""
+#~ "Enable this if you want to show the news section's first page on the "
+#~ "<code>index.php</code> page."
+#~ msgstr ""
+#~ "Vink aan om de nieuwspagina te laten zien op <code>index.php</code>."
+
+#~ msgid "Allow search"
+#~ msgstr "Sta zoeken toe"
+
+#~ msgid "Check to enable search form."
+#~ msgstr "Vink aan om het zoekveld te tonen."
+
+#~ msgid "Show Archive"
+#~ msgstr "Toon archief"
+
+#~ msgid "Show Contact"
+#~ msgstr "Toon contact"
+
+#~ msgid "Show image EXIF data"
+#~ msgstr "Toon EXIF informatie"
+
+#~ msgid "Show Random Picture"
+#~ msgstr "Toon willekeurige afbeelding"
+
+#~ msgid "Show Tags"
+#~ msgstr "Toon tags"
+
+#~ msgid "Use Colorbox in Image page"
+#~ msgstr "Gebruik Colorbox"
+
+#~ msgid "No unpublished pages available"
+#~ msgstr "Er zijn geen ongepubliceerde pagina’s"
