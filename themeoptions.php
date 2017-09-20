@@ -22,7 +22,7 @@ class ThemeOptions {
 		setThemeOption('image_size', '700', NULL, 'i-feel-dirty');
 		setThemeOptionDefault('image_use_side', 'longest');
 		setThemeOptionDefault('custom_index_page', '');
-		
+
 		setThemeOptionDefault('ifeeldirty_homepage', 'none');
 		setThemeOptionDefault('ifeeldirty_news_on_homepage', false);
 		setThemeOptionDefault('allow_search', true);
@@ -60,7 +60,7 @@ class ThemeOptions {
 			gettext('Allow search') => array('key' => 'allow_search', 'type' => OPTION_TYPE_CHECKBOX, 'desc' => gettext('Check to enable search form.')),
 			gettext('Show Archive') => array('key' => 'show_archive', 'type' => OPTION_TYPE_CHECKBOX, 'desc' => gettext_th('Display a menu link to the Archive list.', 'i-feel-dirty')),
 			gettext('Show Contact') => array('key' => 'show_contact', 'type' => OPTION_TYPE_CHECKBOX, 'desc' => gettext_th('Display a menu link to the Contact box.', 'i-feel-dirty')),
-			gettext('Show image EXIF data') => array('key' => 'show_exif', 'type' => OPTION_TYPE_CHECKBOX, 'desc' => gettext_th('Show the EXIF Data on Image page. Remember you have to check EXIFs data you want to show on admin>image>information EXIF.', 'i-feel-dirty')),
+			gettext('Show image EXIF data') => array('key' => 'show_exif', 'type' => OPTION_TYPE_CHECKBOX, 'desc' => gettext_th('Show the EXIF Data on Image page. Remember you have to check EXIFs data you want to show on Admin>Options>Image>Metadata.', 'i-feel-dirty')),
 			gettext('Show Random Picture') => array('key' => 'show_random_pict', 'type' => OPTION_TYPE_CHECKBOX, 'desc' => gettext_th('Display a random picture of the gallery.', 'i-feel-dirty')),
 			gettext('Show Tags') => array('key' => 'show_tag_cloud', 'type' => OPTION_TYPE_CHECKBOX, 'desc' => gettext_th('Check to show a tag cloud with all the tags of the gallery.', 'i-feel-dirty')),
 			gettext('Use Colorbox in Image page') => array('key' => 'use_colorbox_image', 'type' => OPTION_TYPE_CHECKBOX, 'desc' => gettext_th('Check to display the full size image with Colorbox in Image page.', 'i-feel-dirty'))
