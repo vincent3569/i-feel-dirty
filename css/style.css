@@ -6,7 +6,7 @@ Author: Studio ST
 Author URI: http://studio.st/
 Adapted on ZenPhoto by: Vincent3569
 URI: http://www.vincentbourganel.fr
-Version 1.4.5
+Version 1.4.7
 */
 
 /* --------- clear -----------*/
@@ -213,7 +213,7 @@ img {
 }
 .album {
 	float: left;
-	margin: 0 15px 15px 0;
+	margin: 0 10px 10px 0;
 }
 .album-lastcol {
 	float: left;
@@ -949,40 +949,4 @@ div.buttons {
 }
 .nav-info {
 	float: right;
-}
-
-/*------------------------------------------------------------------------------
-									admin toolbox
------------------------------------------------------------------------------- */
-#admin, #admin_data {
-	position: fixed;
-	right: 0px;
-	top: 0px;
-	width: 150px;
-	padding: 5px 15px;
-	background: url(../images/cntbg.gif) repeat-y;
-	z-index: 1001;
-	text-align: left;
-	font-size: 12px;
-}
-#admin h3 {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	font-size: 14px;
-	color: #6C644D;
-}
-#admin_data {
-	margin: 27px 0 0;
-}
-#admin_data li {
-	margin-bottom: 3px;
-}
-#admin a, #admin_data a {
-	color: #000;
-	text-decoration: none;
-}
-#admin a:hover, #admin_data a:hover {
-	background-color: #6c644d;
-	color: #fff;
 }

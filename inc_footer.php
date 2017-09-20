@@ -50,4 +50,4 @@
 
 </body>
 </html>
-<!-- i-feel-dirty 1.4.5.1 - a ZenPhoto/ZenPage theme by Studio ST and Vincent3569 -->
+<!-- i-feel-dirty 1.4.7 - a ZenPhoto/ZenPage theme by Studio ST and Vincent3569 -->
