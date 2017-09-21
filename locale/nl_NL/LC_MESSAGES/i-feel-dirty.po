@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: i-feel-dirty\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-31 22:38+0200\n"
-"PO-Revision-Date: 2017-07-31 22:38+0200\n"
-"Last-Translator: Vincent Bourganel <vincent_bourganel@yahoo.fr>\n"
+"POT-Creation-Date: 2017-09-20 13:09+0200\n"
+"PO-Revision-Date: 2017-09-20 14:51+0200\n"
+"Last-Translator: fretzl\n"
 "Language-Team: vincent3569 <vincent_bourganel@yahoo.fr>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,11 @@ msgstr "Je kunt de pijltjestoetsen gebruiken om te navigeren"
 
 #: themeoptions.php:61
 msgid "Display a menu link to the Archive list."
-msgstr "Toon een link naar de <code>archief</code> pagina."
+msgstr "Toon een link naar de Archief pagina."
 
 #: themeoptions.php:62
 msgid "Display a menu link to the Contact box."
-msgstr "Toon een link naar de <code>contact</code> pagina."
+msgstr "Toon een link naar de Contact pagina."
 
 #: themeoptions.php:63
 msgid ""
@@ -35,7 +35,7 @@ msgid ""
 "want to show on admin>image>information EXIF."
 msgstr ""
 "Toon de EXIF informatie uit afbeeldingen op de afbeeldingspagina. Vergeet "
-"niet de gewenste EXIF informatie te selecteren op Admin -> Opties -> "
+"niet de gewenste EXIF informatie te selecteren in Admin -> Opties -> "
 "Afbeelding ->Metadata."
 
 #: themeoptions.php:64
