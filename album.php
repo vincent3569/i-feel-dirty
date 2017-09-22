@@ -4,13 +4,18 @@
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
-					<?php if ((class_exists('Zenpage')) && ((gettext(getOption('ifeeldirty_homepage')) <> gettext('none')) || (getOption('ifeeldirty_news_on_homepage')))) { ?>
-						&raquo;&nbsp;<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
-					<?php } ?>
-					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); ?><?php printAlbumTitle(); ?>
+					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
+					<?php
+					if ($_ifeeldirty_homepage || $_ifeeldirty_news_on_homepage) {
+						printCustomPageURL(getGalleryTitle(), 'gallery', '', ' » ');
+					}
+					?>
+					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); printAlbumTitle(); ?>
 				</h2>
+			</div>
+
+			<div class="album-desc clearfix">
+				<?php printAlbumDesc(); ?>
 			</div>
 
 			<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
@@ -21,26 +26,27 @@
 			</div>
 			<?php } ?>
 
-			<div class="album-desc clearfix"><?php printAlbumDesc(); ?></div>
-
 			<?php if (isAlbumPage()) { ?>
 				<?php include('inc_print_album_thumb.php'); ?>
 			<?php } ?>
 
-			<?php include('inc_print_image_thumb.php'); ?>
+			<?php if (getNumImages() > 0) { ?>
+				<?php include('inc_print_image_thumb.php'); ?>
+			<?php } ?>
 
 			<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
 
-			<?php if (function_exists('printAddToFavorites')) { ?>
+			<?php if ((zp_loggedin()) && (extensionEnabled('favoritesHandler'))) { ?>
 			<div class="favorites"><?php printAddToFavorites($_zp_current_album); ?></div>
 			<?php } ?>
 
-			<?php if (function_exists('printGoogleMap')) { ?>
+			<?php if (extensionEnabled('GoogleMap')) { ?>
 			<div class="googlemap"><?php printGoogleMap(NULL, 'googlemap'); ?></div>
 			<?php } ?>
 
-			<?php if (function_exists('printCommentForm')) {include('inc_print_comment.php');} ?>
-
+			<?php if (extensionEnabled('comment_form')) { ?>
+				<?php include('inc_print_comment.php'); ?>
+			<?php } ?>
 
 		</div>	<!-- content -->
 

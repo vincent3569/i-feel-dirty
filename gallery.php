@@ -4,11 +4,12 @@
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
-					<?php if ((class_exists('Zenpage')) && ((gettext(getOption('ifeeldirty_homepage')) <> gettext('none')) || (getOption('ifeeldirty_news_on_homepage')))) { ?>
-						&raquo;&nbsp;<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
-					<?php } ?>
+					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
+					<?php
+					if ($_ifeeldirty_homepage || $_ifeeldirty_news_on_homepage) {
+						printCustomPageURL(getGalleryTitle(), 'gallery', '', ' » ');
+					}
+					?>
 				</h2>
 			</div>
 
@@ -17,6 +18,8 @@
 			<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
 
 			<?php include('inc_print_album_thumb.php'); ?>
+
+			<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
 
 		</div>	<!-- content -->
 

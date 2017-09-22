@@ -4,9 +4,8 @@
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
-					<?php echo gettext('Password required'); ?>
+					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
+					&raquo;&nbsp;<?php echo gettext('Password required'); ?>
 				</h2>
 			</div>
 

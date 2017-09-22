@@ -1,10 +1,13 @@
 <?php
-if (function_exists('checkForPage')) { // check if Zenpage is enabled or not
-	if (checkForPage(getOption('ifeeldirty_homepage'))) { // switch to home page
+// force UTF-8 Ø
+if (!defined('WEBPATH')) die();
+
+if ($_zenpage_enabled) { // check if Zenpage is enabled or not
+	if ($_ifeeldirty_homepage) { // switch to home page
 		$isHomePage = true;
 		include ('pages.php');
 	} else {
-		if (getOption('ifeeldirty_news_on_homepage')) { // switch to news page
+		if ($_ifeeldirty_news_on_homepage) { // switch to news page
 			$isHomePage = true;
 			include ('news.php');
 		} else {

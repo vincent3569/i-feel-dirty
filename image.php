@@ -17,12 +17,13 @@
 				</div>
 
 				<h2>
-					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL(false)); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
-					<?php if ((class_exists('Zenpage')) && ((gettext(getOption('ifeeldirty_homepage')) <> gettext('none')) || (getOption('ifeeldirty_news_on_homepage')))) { ?>
-						&raquo;&nbsp;<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
-					<?php } ?>
-					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); ?><?php printAlbumBreadcrumb('', ' » '); ?><?php printImageTitle(); ?>
+					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
+					<?php
+					if ($_ifeeldirty_homepage || $_ifeeldirty_news_on_homepage) {
+						printCustomPageURL(getGalleryTitle(), 'gallery', '', ' » ');
+					}
+					?>
+					&raquo;&nbsp;<?php printParentBreadcrumb('', ' » ', ' » '); printAlbumBreadcrumb('', ' » '); printImageTitle(); ?>
 				</h2>
 			</div>
 
@@ -55,19 +56,17 @@
 				<div class="clearfix"></div>
 			</div>
 
-			<?php if (function_exists('printAddToFavorites')) { ?>
-				<div class="favorites"><?php printAddToFavorites($_zp_current_image); ?></div>
+			<?php if ((zp_loggedin()) && (extensionEnabled('favoritesHandler'))) { ?>
+			<div class="favorites"><?php printAddToFavorites($_zp_current_image); ?></div>
 			<?php } ?>
 
-			<?php if (function_exists('printRating')) { ?>
-			<div class="rating"><?php printRating(); ?></div>
-			<?php  } ?>
-
-			<?php if (function_exists('printGoogleMap')) { ?>
-			<div class="googlemap"><?php printGoogleMap(NULL, 'googlemap'); ?></div>
+			<?php if (extensionEnabled('rating')) { ?>
+			<div id="rating-wrap"><?php printRating(); ?></div>
 			<?php } ?>
 
-			<?php if (function_exists('printCommentForm')) {include('inc_print_comment.php');} ?>
+			<?php if (extensionEnabled('comment_form')) { ?>
+				<?php include('inc_print_comment.php'); ?>
+			<?php } ?>
 
 		</div>	<!-- content -->
 

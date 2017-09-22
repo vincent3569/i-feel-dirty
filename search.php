@@ -4,9 +4,8 @@
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
-					&raquo;&nbsp;<?php echo '<em>'.gettext('Recherche').'</em>'; ?>
+					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
+					&raquo;&nbsp;<?php echo '<em>'.gettext('Search').'</em>'; ?>
 				</h2>
 			</div>
 
@@ -15,12 +14,14 @@
 			$numalbums = getNumAlbums();
 			$total1 = $numimages + $numalbums;
 
-			$zenpage = getOption('zp_plugin_zenpage');
-			if ($zenpage && !isArchive()) {
-				$numnews = getNumNews();
-				$numpages = getNumPages();
-			} else {
-				$numnews = $numpages = 0;
+			$numnews = $numpages = 0;
+			if ($_zenpage_enabled && !isArchive()) {
+				if ($_zenpage_and_news_enabled) {
+					$numnews = getNumNews();
+				}
+				if ($_zenpage_and_pages_enabled) {
+					$numpages = getNumPages();
+				}
 			}
 			$total = $total1 + $numnews + $numpages ;
 
@@ -76,6 +77,8 @@
 					include('inc_print_image_thumb.php');
 				}
 				?>
+
+				<?php printPageListWithNav(gettext('« prev'), gettext('next »'), false, true, 'pagelist', NULL, true, 7); ?>
 			</div>
 
 			<?php
@@ -83,15 +86,14 @@
 				if ($numnews > 0) { ?>
 					<div>
 						<ul class="search-item"><li><?php printf(gettext('Articles (%s)'), $numnews); ?></li></ul>
-						<?php while (next_news('date', 'desc')) { ?>
+						<?php while (next_news()) { ?>
 							<div class="search-news clearfix">
 								<h3 class="search-title"><?php printNewsURL(); ?></h3>
 								<div class="search-content clearfix">
-									<?php echo shortenContent(strip_tags(getNewsContent()), 100, getOption('zenpage_textshorten_indicator')); ?>
+									<?php echo shortenContent(getBare(getNewsContent()), 100, getOption("zenpage_textshorten_indicator")); ?>
 								</div>
 							</div>
 						<?php } ?>
-
 					</div>
 				<?php
 				}
@@ -101,9 +103,9 @@
 						<ul class="search-item"><li><?php printf(gettext('Pages (%s)'), $numpages); ?></li></ul>
 						<?php while (next_page()) { ?>
 							<div class="search-page clearfix">
-								<h3 class="search-title"><?php printPageTitlelink(); ?></h3>
+								<h3 class="search-title"><?php printPageURL(); ?></h3>
 								<div class="search-content clearfix">
-									<?php echo shortenContent(strip_tags(getPageContent()), 100, getOption("zenpage_textshorten_indicator")); ?>
+									<?php echo shortenContent(getBare(getPageContent()), 100, getOption("zenpage_textshorten_indicator")); ?>
 								</div>
 							</div>
 						<?php } ?>

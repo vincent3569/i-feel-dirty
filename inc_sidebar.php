@@ -8,24 +8,24 @@
 			</div>
 			<?php } ?>
 
-			<?php if (function_exists('printAlbumMenu')) { ?>
+			<?php if (extensionEnabled('print_album_menu')) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 				<h3><?php if (getGalleryTitle() <> NULL) {echo html_encode(getGalleryTitle()); } else {echo gettext('Gallery'); }; ?></h3>
 				<ul><li>
-					<?php printCustomPageURL(gettext('Album index'), 'gallery'); ?>
+					<?php printCustomPageURL(gettext('Gallery Index'), 'gallery'); /* Album index */ ?>
 				</li></ul>
 				<?php printAlbumMenu('list', false, '', 'menu-active', 'submenu', 'menu-active', '', false, false); ?>
 			</div>
 			<?php } ?>
 
-			<?php if ((function_exists('printAllNewsCategories')) && (getNumNews(true) > 0)) { ?>
+			<?php if ($_zenpage_and_news_enabled && (getNumNews(true) > 0)) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 				<h3><?php echo gettext('News articles'); ?></h3>
 				<?php printAllNewsCategories(gettext('All news'), true, 'news-cat-list', 'menu-active'); ?>
 			</div>
 			<?php } ?>
 
-			<?php if ((function_exists('printPageMenu')) && (getNumPages(true) > 0)) { ?>
+			<?php if ($_zenpage_and_pages_enabled && (getNumPages(true) > 0)) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 				<h3><?php echo gettext('Pages'); ?></h3>
 				<?php printPageMenu('list', '', 'menu-active', 'submenu', 'menu-active'); ?>
@@ -59,13 +59,13 @@
 				<ul>
 					<?php
 					if ($_zp_gallery_page == 'archive.php') {
-						if (function_exists('printNewsArchive')) {
+						if ($_zenpage_and_news_enabled) {
 							echo '<li class="menu-active">'.gettext('Gallery And News').'</li>';
 						} else {
 							echo '<li class="menu-active">'.gettext('Gallery').'</li>';
 						}
 					} else {
-						if (function_exists('printNewsArchive')) {
+						if ($_zenpage_and_news_enabled) {
 							echo "<li>"; printCustomPageURL(gettext('Gallery and News'), 'archive'); echo "</li>";
 						} else {
 							echo "<li>"; printCustomPageURL(gettext('Gallery'), 'archive'); echo "</li>";
@@ -76,7 +76,7 @@
 			</div>
 			<?php } ?>
 
-			<?php if ((getOption('show_contact')) && (function_exists('printContactForm'))) { ?>
+			<?php if (extensionEnabled('contact_form')) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 				<h3><?php echo gettext('Contact'); ?></h3>
 				<ul>
@@ -91,14 +91,16 @@
 			</div>
 			<?php } ?>
 
-			<?php if (function_exists('printUserLogin_out')) { ?>
+			<?php if (extensionEnabled('user_login-out')) { ?>
 			<div class="bloque<?php echo ($x % 2) + 1; $x = $x + 1; ?>">
 				<h3><?php echo gettext('user'); ?></h3>
+				<?php if ($_zp_gallery_page != 'register.php') {?>
 				<ul>
 					<li><?php printUserLogin_out('', '', 2); ?></li>
 				</ul>
+				<?php }	?>
 
-				<?php if ((!zp_loggedin()) && (function_exists('printRegistrationForm'))) { ?>
+				<?php if ((!zp_loggedin()) && (extensionEnabled('register_user'))) { ?>
 				<ul>
 					<li>
 						<?php
@@ -112,7 +114,7 @@
 				</ul>
 				<?php }	?>
 
-				<?php if ((zp_loggedin()) && (function_exists('printFavoritesURL'))) { ?>
+				<?php if ((zp_loggedin()) && (extensionEnabled('favoritesHandler'))) { ?>
 				<ul>
 					<li>
 						<?php printFavoritesURL(); ?>

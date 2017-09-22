@@ -1,5 +1,5 @@
 <?php
-if (!function_exists('printContactForm')) die();
+if (!extensionEnabled('contact_form')) die();
 include ('inc_header.php');
 ?>
 
@@ -7,9 +7,8 @@ include ('inc_header.php');
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
-					<?php echo gettext('Contact') ?>
+					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
+					&raquo;&nbsp;<?php echo gettext('Contact') ?>
 				</h2>
 			</div>
 

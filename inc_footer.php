@@ -13,32 +13,12 @@
 
 		<div class="footer2">
 			<?php
-			if (function_exists('printFavoritesURL')) {
-				printFavoritesURL();
+			if (getOption('show_archive')) {
+				printCustomPageURL(gettext('Archive View'), 'archive', '', '', ' | ');
 			}
-
-			if ( getOption('show_archive') && !function_exists('printFavoritesURL') ) {
-				printCustomPageURL(gettext('Archive View'), 'archive', '', '', '');
-			} else {
-				if ( getOption('show_archive') && function_exists('printFavoritesURL') ) {
-					printCustomPageURL(gettext('Archive View'), 'archive', '', ' | ', '');
-				}
+			if (extensionEnabled('contact_form')) {
+				printCustomPageURL(gettext('Contact'), 'contact');
 			}
-
-			if ( zp_loggedin() ) {
-				if ( function_exists('printContactForm') && getOption('show_contact') ) {
-					printCustomPageURL(gettext('Contact'), 'contact', '', ' | ', '');
-				}
-			} else {
-				if ( function_exists('printContactForm') && getOption('show_contact') && getOption('show_archive') ) {
-					printCustomPageURL(gettext('Contact'), 'contact', '', ' | ', '');
-				} else {
-					if ( function_exists('printContactForm') && getOption('show_contact') && !getOption('show_archive') ) {
-						printCustomPageURL(gettext('Contact'), 'contact', '', '', '');
-					}
-				}
-			}
-
 			?>
 		</div>
 	</div>	<!-- footer -->
@@ -50,4 +30,4 @@
 
 </body>
 </html>
-<!-- i-feel-dirty 1.4.7 - a ZenPhoto/ZenPage theme by Studio ST and Vincent3569 -->
+<!-- i-feel-dirty 1.4.14 - a ZenPhoto/ZenPage theme by Studio ST and Vincent3569 -->

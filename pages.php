@@ -1,5 +1,5 @@
 <?php
-if (!class_exists('Zenpage')) die();
+if (!$_zenpage_and_pages_enabled) die();
 include ('inc_header.php');
 ?>
 
@@ -7,8 +7,7 @@ include ('inc_header.php');
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
+					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
 				</h2>
 			</div>
 
@@ -30,7 +29,9 @@ include ('inc_header.php');
 					?>
 				</div>
 
-				<?php if (function_exists('printCommentForm')) {include('inc_print_comment.php');} ?>
+				<?php if (extensionEnabled('comment_form')) { ?>
+					<?php include('inc_print_comment.php'); ?>
+				<?php } ?>
 
 			</div>
 

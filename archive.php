@@ -4,9 +4,8 @@
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>&nbsp;&raquo;
-					<?php echo gettext('Archive View'); ?>
+					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
+					&raquo;&nbsp;<?php echo gettext('Archive View'); ?>
 				</h2>
 			</div>
 
@@ -14,10 +13,10 @@
 				<table id="archive">
 					<tr>
 						<td>
-							<h4><?php echo gettext('Gallery Archive'); ?></h4>
+							<h4><?php echo gettext('Gallery archive'); ?></h4>
 							<?php printAllDates('archive', 'year', 'month', 'desc'); ?>
 						</td>
-						<?php if (function_exists('printNewsArchive')) { ?>
+						<?php if ($_zenpage_and_news_enabled) { ?>
 						<td id="newsarchive">
 							<h4><?php echo gettext('News archive'); ?></h4>
 							<?php printNewsArchive('archive', 'year', 'month', 'archive-active', false, 'desc'); ?>

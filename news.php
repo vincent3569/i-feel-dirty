@@ -1,5 +1,5 @@
 <?php
-if (!class_exists('Zenpage')) die();
+if (!$_zenpage_and_news_enabled) die();
 include ('inc_header.php');
 ?>
 
@@ -7,9 +7,9 @@ include ('inc_header.php');
 		<div class="content">
 			<div id="breadcrumb">
 				<h2>
-					<?php printHomeLink('', ' » '); ?>
-					<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Main Index'); ?>"><?php echo gettext('Home'); ?></a>
-					<?php printNewsIndexURL(gettext('News'), ' » '); ?><?php printCurrentNewsCategory(' » ' . gettext('Category') . ' : '); ?><?php printCurrentNewsArchive(' » '); ?>
+					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
+					<?php if (!isset($isHomePage)) { echo ' » '; } ?>
+					<?php printZenpageItemsBreadcrumb(' » '); printCurrentNewsCategory(' | ' . gettext('Category') . ' : '); printCurrentNewsArchive(' | '); ?>
 				</h2>
 			</div>
 
@@ -50,7 +50,9 @@ include ('inc_header.php');
 						<?php printTags('links', NULL, 'taglist', ''); ?>
 					</div>
 
-					<?php if (function_exists('printCommentForm')) {include('inc_print_comment.php');} ?>
+					<?php if (extensionEnabled('comment_form')) { ?>
+						<?php include('inc_print_comment.php'); ?>
+					<?php } ?>
 
 				</div>
 
