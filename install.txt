@@ -1,6 +1,0 @@
-Installation
-
-Upload the zip file to your computer
-Unzip the downloaded zip file locally, and upload the i-feel-dirty folder to the directory /themes/ of your ZenPhoto site
-In ZenPhoto administration, go to the Themes tab and activate the i-feel-dirty theme
-Navigate to Options>Theme to view and configure the available options for i-feel-dirty

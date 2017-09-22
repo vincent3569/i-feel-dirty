@@ -1,3 +1,11 @@
+* 1.4.14
+- rewrire breadcrumb (removal of the link to homepage)
+- uses new variable $_zenpage_and_news_enabled and $_zenpage_and_pages_enabled to manage ZP_NEWS_ENABLED and ZP_PAGES_ENABLED values
+- 404 managmement if extensions are not allowed
+- some rewrite to be more consitant with zenphoto 1.4.14
+- fix some issues
+
+
 * 1.4.7
 	- fix general coding incompatibilities with Zenphoto 1.4.7
 
