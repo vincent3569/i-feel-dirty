@@ -6,7 +6,7 @@
 				<h2>
 					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
 					<?php
-					if ($isHomePage) {
+					if (isset($isHomePage) && $isHomePage) {
 						printCustomPageURL(getGalleryTitle(), 'gallery', '', ' » ');
 					}
 					?>

@@ -12,7 +12,7 @@ if (!defined('WEBPATH')) die();
 	echo getMainSiteName() . ' | ';
 	switch ($_zp_gallery_page) {
 		case 'index.php':
-			if ($isHomePage) { echo gettext('Home'); } else { echo gettext('Gallery'); }; break;
+			if (isset($isHomePage) && $isHomePage) { echo gettext('Home'); } else { echo gettext('Gallery'); }; break;
 		case '404.php':
 			echo gettext('Object not found'); break;
 		case 'album.php':
