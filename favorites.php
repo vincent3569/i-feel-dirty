@@ -1,6 +1,6 @@
 <?php 
-if (!extensionEnabled('favoritesHandler')) die();
-include ('inc_header.php');
+if (extensionEnabled('favoritesHandler')) {
+	include ('inc_header.php');
 ?>
 
 	<div class="main">
@@ -45,4 +45,9 @@ include ('inc_header.php');
 
 	</div>	<!-- main -->
 
-<?php include('inc_footer.php'); ?>
+<?php
+	include('inc_footer.php');
+
+} else {
+	include(SERVERPATH . '/' . ZENFOLDER . '/404.php');
+} ?>

@@ -1,6 +1,6 @@
-<?php
-if (!$_zenpage_and_news_enabled) die();
-include ('inc_header.php');
+<?php 
+if ($_zenpage_and_news_enabled) {
+	include ('inc_header.php');
 ?>
 
 	<div class="main">
@@ -70,4 +70,9 @@ include ('inc_header.php');
 
 	</div>	<!-- main -->
 
-<?php include('inc_footer.php'); ?>
+<?php
+	include('inc_footer.php');
+
+} else {
+	include(SERVERPATH . '/' . ZENFOLDER . '/404.php');
+} ?>
