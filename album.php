@@ -6,7 +6,7 @@
 				<h2>
 					<?php printGalleryIndexURL('', gettext('Home'), false); ?>
 					<?php
-					if ($_ifeeldirty_homepage || $_ifeeldirty_news_on_homepage) {
+					if ($isHomePage) {
 						printCustomPageURL(getGalleryTitle(), 'gallery', '', ' » ');
 					}
 					?>
