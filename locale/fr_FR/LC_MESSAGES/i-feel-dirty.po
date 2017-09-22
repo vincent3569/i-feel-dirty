@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: i-feel-dirty\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-31 22:36+0200\n"
-"PO-Revision-Date: 2017-07-31 22:36+0200\n"
+"POT-Creation-Date: 2017-09-22 22:39+0200\n"
+"PO-Revision-Date: 2017-09-22 22:44+0200\n"
 "Last-Translator: Vincent Bourganel <vincent_bourganel@yahoo.fr>\n"
 "Language-Team: vincent3569 <vincent_bourganel@yahoo.fr>\n"
 "Language: fr_FR\n"
@@ -13,35 +13,36 @@ msgstr ""
 "X-Poedit-KeywordsList: ;gettext_th\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: inc_footer.php:7
 msgid "You can browse with the arrows keys of your keyboard"
 msgstr "Vous pouvez naviguer à l'aide des flèches de votre clavier"
 
-#: themeoptions.php:61
+#: themeoptions.php:74
 msgid "Display a menu link to the Archive list."
-msgstr ""
+msgstr "Affiche un lien vers les Archives dans le menu."
 
-#: themeoptions.php:62
-msgid "Display a menu link to the Contact box."
-msgstr ""
-
-#: themeoptions.php:63
+#: themeoptions.php:75
 msgid ""
 "Show the EXIF Data on Image page. Remember you have to check EXIFs data you "
-"want to show on admin>image>information EXIF."
+"want to show on Admin>Options>Image>Metadata."
 msgstr ""
+"Affiche les principales données EXIF sur la page Image. Vous devez choisir "
+"ces données EXIF dans les pages Admin>Options>Image>Metadata."
 
-#: themeoptions.php:64
+#: themeoptions.php:76
 msgid "Display a random picture of the gallery."
-msgstr ""
+msgstr "Affiche une image aléatoire de la galerie."
 
-#: themeoptions.php:65
+#: themeoptions.php:77
 msgid "Check to show a tag cloud with all the tags of the gallery."
 msgstr ""
+"Cocher pour afficher un nuage de tag avec tous les tags de la galerie."
 
-#: themeoptions.php:66
+#: themeoptions.php:78
 msgid "Check to display the full size image with Colorbox in Image page."
 msgstr ""
+"Cocher pour afficher l'image pleine taille avec Colorbox dans la page des "
+"images."
