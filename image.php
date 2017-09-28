@@ -44,7 +44,7 @@
 
 			<div id="image-title"><?php printImageTitle(); ?></div>
 
-			<div id="image-infos"><?php printImageDesc(true); ?></div>
+			<div id="image-infos"><?php printImageDesc(); ?></div>
 
 			<?php if ((getOption('show_exif')) && (getImageMetaData())) { ?>
 			<div id="exif_link"><a href="#" title="<?php echo gettext('Image Info'); ?>" class="colorbox"><?php echo gettext('Image Info'); ?></a></div>
