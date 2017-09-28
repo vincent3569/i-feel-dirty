@@ -36,7 +36,7 @@
 			<div id="image">
 				<?php $fullimage = getFullImageURL(); ?>
 				<?php if ((getOption('use_colorbox_image')) && (!empty($fullimage))) { ?>
-					<a rel="zoom" href="<?php echo html_encode($fullimage); ?>" title="<?php echo getBareImageTitle(); ?>"><?php printDefaultSizedImage(getImageTitle()); ?></a>
+					<a rel="zoom" href="<?php echo html_encode($fullimage); ?>" title="<?php echo html_encode(getBareImageTitle()); ?>"><?php printDefaultSizedImage(getImageTitle()); ?></a>
 				<?php } else { ?>
 					<?php printDefaultSizedImage(getImageTitle()); ?>
 				<?php } ?>
