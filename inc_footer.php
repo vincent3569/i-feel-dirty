@@ -30,4 +30,4 @@
 
 </body>
 </html>
-<!-- i-feel-dirty 1.4.14 - a ZenPhoto/ZenPage theme by Studio ST and Vincent3569 -->
+<!-- i-feel-dirty 1.4.14 - a Zenphoto theme by Studio ST and Vincent3569 -->
